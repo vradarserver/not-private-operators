@@ -105,7 +105,10 @@ namespace Editor
             using(new WaitCursor()) {
                 _AllCandidateAircraft.Clear();
                 _AllCandidateAircraft.AddRange(
-                    BaseStationDatabase.LoadMaybePrivateAircraft(BaseStationSqbFileName)
+                    BaseStationDatabase
+                        .LoadMaybePrivateAircraft(BaseStationSqbFileName)
+                        .Where(r => !MilitaryIcaoRanges.IsMilitary(r.ModeS))
+                        .OrderBy(r => r.RegisteredOwners.ToLower())
                 );
                 BuildAircraftListItems();
             }
@@ -119,30 +122,20 @@ namespace Editor
                 _AircraftListItems.Clear();
                 _AircraftListItemIndexes.Clear();
 
-                _AircraftListItems.AddRange(
-                    _AllCandidateAircraft
-                        .Select(r => new {
-                            Aircraft = r,
-                            IsNotPrivateOperator = NameAndExpressionFiles.IsNotPrivateOperator(r.RegisteredOwners),
-                        })
-                        .Where(r =>
-                               !MilitaryIcaoRanges.IsMilitary(r.Aircraft.ModeS)
-                            && PassesFilter(r.Aircraft.RegisteredOwners, r.IsNotPrivateOperator)
-                        )
-                        .GroupBy(r => r.Aircraft.RegisteredOwners.ToLower(), r => r)
-                        .OrderBy(r => r.Key)
-                        .Select(r => {
-                            var first = r.First();
-                            return new AircraftListItem() {
-                                OperatorName =          first.Aircraft.RegisteredOwners,
-                                CountAircraft =         r.Count(),
-                                IsNotPrivateOperator =  first.IsNotPrivateOperator
+                AircraftListItem lastItem = null;
+                foreach(var aircraft in _AllCandidateAircraft) {
+                    if(PassesFilter(aircraft.RegisteredOwners, out var isNotPrivateOperator)) {
+                        if(!String.Equals(aircraft.RegisteredOwners, lastItem?.OperatorName, StringComparison.OrdinalIgnoreCase)) {
+                            lastItem = new AircraftListItem() {
+                                OperatorName =          aircraft.RegisteredOwners,
+                                IsNotPrivateOperator =  isNotPrivateOperator,
+                                CountAircraft =         0,
                             };
-                        })
-                );
-                for(var i = 0;i < _AircraftListItems.Count;++i) {
-                    var aircraftListItem = _AircraftListItems[i];
-                    _AircraftListItemIndexes.Add(aircraftListItem.OperatorName, i);
+                            _AircraftListItemIndexes.Add(lastItem.OperatorName, _AircraftListItems.Count);
+                            _AircraftListItems.Add(lastItem);
+                        }
+                        ++lastItem.CountAircraft;
+                    }
                 }
 
                 AircraftListView.BeginUpdate();
@@ -162,20 +155,24 @@ namespace Editor
             }
         }
 
-        private bool PassesFilter(string ownerName, bool? isNotPrivateOwner)
+        private bool PassesFilter(string operatorName, out bool? isNotPrivateOperator)
         {
-            var canShow =
-                   (isNotPrivateOwner == null && ShowCategoryNone)
-                || (isNotPrivateOwner != null && isNotPrivateOwner.Value && ShowCategoryNotPrivate)
-                || (isNotPrivateOwner != null && !isNotPrivateOwner.Value && ShowCategoryPrivate);
+            isNotPrivateOperator = null;
 
-            return canShow
-                && (
-                       String.IsNullOrEmpty(Filter)
-                    || (StartsWithFilter && ownerName.StartsWith(Filter, StringComparison.OrdinalIgnoreCase))
-                    || (EndsWithFilter && ownerName.EndsWith(Filter, StringComparison.OrdinalIgnoreCase))
-                    || (ContainsFilter && ownerName.IndexOf(Filter, StringComparison.OrdinalIgnoreCase) != -1)
-                   );
+            // The categorisation can be more expensive than the filter because it involves regexes. Do the filter first.
+            var result = String.IsNullOrEmpty(Filter)
+                            || (StartsWithFilter && operatorName.StartsWith(Filter, StringComparison.OrdinalIgnoreCase))
+                            || (EndsWithFilter && operatorName.EndsWith(Filter, StringComparison.OrdinalIgnoreCase))
+                            || (ContainsFilter && operatorName.IndexOf(Filter, StringComparison.OrdinalIgnoreCase) != -1);
+
+            if(result) {
+                isNotPrivateOperator = NameAndExpressionFiles.IsNotPrivateOperator(operatorName);
+                result = (isNotPrivateOperator == null && ShowCategoryNone)
+                      || (isNotPrivateOperator != null && isNotPrivateOperator.Value && ShowCategoryNotPrivate)
+                      || (isNotPrivateOperator != null && !isNotPrivateOperator.Value && ShowCategoryPrivate);
+            }
+
+            return result;
         }
 
         private void AddSelectedToNotPrivateNames()
