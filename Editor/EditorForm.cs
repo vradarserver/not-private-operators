@@ -113,51 +113,53 @@ namespace Editor
 
         private void BuildAircraftListItems()
         {
-            var scrollToIdx = AircraftListView.TopItem?.Index ?? -1;
+            using(new WaitCursor()) {
+                var scrollToIdx = AircraftListView.TopItem?.Index ?? -1;
 
-            _AircraftListItems.Clear();
-            _AircraftListItemIndexes.Clear();
+                _AircraftListItems.Clear();
+                _AircraftListItemIndexes.Clear();
 
-            _AircraftListItems.AddRange(
-                _AllCandidateAircraft
-                    .Select(r => new {
-                        Aircraft = r,
-                        IsNotPrivateOperator = NameAndExpressionFiles.IsNotPrivateOperator(r.RegisteredOwners),
-                    })
-                    .Where(r =>
-                           !MilitaryIcaoRanges.IsMilitary(r.Aircraft.ModeS)
-                        && PassesFilter(r.Aircraft.RegisteredOwners, r.IsNotPrivateOperator)
-                    )
-                    .GroupBy(r => r.Aircraft.RegisteredOwners.ToLower(), r => r)
-                    .OrderBy(r => r.Key)
-                    .Select(r => {
-                        var first = r.First();
-                        return new AircraftListItem() {
-                            OperatorName =          first.Aircraft.RegisteredOwners,
-                            CountAircraft =         r.Count(),
-                            IsNotPrivateOperator =  first.IsNotPrivateOperator
-                        };
-                    })
-            );
-            for(var i = 0;i < _AircraftListItems.Count;++i) {
-                var aircraftListItem = _AircraftListItems[i];
-                _AircraftListItemIndexes.Add(aircraftListItem.OperatorName, i);
-            }
-
-            AircraftListView.BeginUpdate();
-            try {
-                AircraftListView.VirtualListSize = _AircraftListItems.Count;
-                scrollToIdx = Math.Min(scrollToIdx, _AircraftListItems.Count - 1);
-                if(scrollToIdx != -1) {
-                    var item = AircraftListView.FindItemWithText(_AircraftListItems[scrollToIdx].OperatorName);
-                    if(item != null) {
-                        AircraftListView.TopItem = item;
-                    }
+                _AircraftListItems.AddRange(
+                    _AllCandidateAircraft
+                        .Select(r => new {
+                            Aircraft = r,
+                            IsNotPrivateOperator = NameAndExpressionFiles.IsNotPrivateOperator(r.RegisteredOwners),
+                        })
+                        .Where(r =>
+                               !MilitaryIcaoRanges.IsMilitary(r.Aircraft.ModeS)
+                            && PassesFilter(r.Aircraft.RegisteredOwners, r.IsNotPrivateOperator)
+                        )
+                        .GroupBy(r => r.Aircraft.RegisteredOwners.ToLower(), r => r)
+                        .OrderBy(r => r.Key)
+                        .Select(r => {
+                            var first = r.First();
+                            return new AircraftListItem() {
+                                OperatorName =          first.Aircraft.RegisteredOwners,
+                                CountAircraft =         r.Count(),
+                                IsNotPrivateOperator =  first.IsNotPrivateOperator
+                            };
+                        })
+                );
+                for(var i = 0;i < _AircraftListItems.Count;++i) {
+                    var aircraftListItem = _AircraftListItems[i];
+                    _AircraftListItemIndexes.Add(aircraftListItem.OperatorName, i);
                 }
-            } finally {
-                AircraftListView.EndUpdate();
+
+                AircraftListView.BeginUpdate();
+                try {
+                    AircraftListView.VirtualListSize = _AircraftListItems.Count;
+                    scrollToIdx = Math.Min(scrollToIdx, _AircraftListItems.Count - 1);
+                    if(scrollToIdx != -1) {
+                        var item = AircraftListView.FindItemWithText(_AircraftListItems[scrollToIdx].OperatorName);
+                        if(item != null) {
+                            AircraftListView.TopItem = item;
+                        }
+                    }
+                } finally {
+                    AircraftListView.EndUpdate();
+                }
+                ListViewCountLabel.Text = $"{AircraftListView.VirtualListSize:N0} item{(AircraftListView.VirtualListSize == 1 ? "" : "s")}";
             }
-            ListViewCountLabel.Text = $"{AircraftListView.VirtualListSize:N0} item{(AircraftListView.VirtualListSize == 1 ? "" : "s")}";
         }
 
         private bool PassesFilter(string ownerName, bool? isNotPrivateOwner)
