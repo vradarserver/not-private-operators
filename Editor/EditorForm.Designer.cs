@@ -210,7 +210,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(32, 13);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Filter:";
+            this.label2.Text = "&Filter:";
             // 
             // StartsWithRadio
             // 
@@ -222,7 +222,7 @@
             this.StartsWithRadio.Size = new System.Drawing.Size(74, 17);
             this.StartsWithRadio.TabIndex = 5;
             this.StartsWithRadio.TabStop = true;
-            this.StartsWithRadio.Text = "Starts with";
+            this.StartsWithRadio.Text = "&Starts with";
             this.StartsWithRadio.UseVisualStyleBackColor = true;
             // 
             // ContainsRadio
@@ -233,7 +233,7 @@
             this.ContainsRadio.Name = "ContainsRadio";
             this.ContainsRadio.Size = new System.Drawing.Size(66, 17);
             this.ContainsRadio.TabIndex = 6;
-            this.ContainsRadio.Text = "Contains";
+            this.ContainsRadio.Text = "&Contains";
             this.ContainsRadio.UseVisualStyleBackColor = true;
             // 
             // EndsWithRadio
@@ -244,7 +244,7 @@
             this.EndsWithRadio.Name = "EndsWithRadio";
             this.EndsWithRadio.Size = new System.Drawing.Size(71, 17);
             this.EndsWithRadio.TabIndex = 7;
-            this.EndsWithRadio.Text = "Ends with";
+            this.EndsWithRadio.Text = "&Ends with";
             this.EndsWithRadio.UseVisualStyleBackColor = true;
             // 
             // ListViewCountLabel
@@ -279,7 +279,7 @@
             this.CategoryNoneCheckBox.Name = "CategoryNoneCheckBox";
             this.CategoryNoneCheckBox.Size = new System.Drawing.Size(52, 17);
             this.CategoryNoneCheckBox.TabIndex = 10;
-            this.CategoryNoneCheckBox.Text = "None";
+            this.CategoryNoneCheckBox.Text = "N&one";
             this.CategoryNoneCheckBox.UseVisualStyleBackColor = true;
             this.CategoryNoneCheckBox.CheckedChanged += new System.EventHandler(this.ShowCategory_CheckedChanged);
             // 
@@ -302,7 +302,7 @@
             this.CategoryNotPrivateCheckBox.Name = "CategoryNotPrivateCheckBox";
             this.CategoryNotPrivateCheckBox.Size = new System.Drawing.Size(78, 17);
             this.CategoryNotPrivateCheckBox.TabIndex = 11;
-            this.CategoryNotPrivateCheckBox.Text = "Not private";
+            this.CategoryNotPrivateCheckBox.Text = "&Not private";
             this.CategoryNotPrivateCheckBox.UseVisualStyleBackColor = true;
             this.CategoryNotPrivateCheckBox.CheckedChanged += new System.EventHandler(this.ShowCategory_CheckedChanged);
             // 
@@ -315,7 +315,7 @@
             this.CategoryPrivateCheckBox.Name = "CategoryPrivateCheckBox";
             this.CategoryPrivateCheckBox.Size = new System.Drawing.Size(59, 17);
             this.CategoryPrivateCheckBox.TabIndex = 12;
-            this.CategoryPrivateCheckBox.Text = "Private";
+            this.CategoryPrivateCheckBox.Text = "&Private";
             this.CategoryPrivateCheckBox.UseVisualStyleBackColor = true;
             this.CategoryPrivateCheckBox.CheckedChanged += new System.EventHandler(this.ShowCategory_CheckedChanged);
             // 
@@ -350,7 +350,7 @@
             this.ApplyFilterButton.Name = "ApplyFilterButton";
             this.ApplyFilterButton.Size = new System.Drawing.Size(75, 23);
             this.ApplyFilterButton.TabIndex = 8;
-            this.ApplyFilterButton.Text = "Apply";
+            this.ApplyFilterButton.Text = "&Apply";
             this.ApplyFilterButton.UseVisualStyleBackColor = true;
             this.ApplyFilterButton.Click += new System.EventHandler(this.ApplyFilterButton_Click);
             // 

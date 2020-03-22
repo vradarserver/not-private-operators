@@ -133,6 +133,7 @@ namespace Editor
                 if(StringsFile.RemoveAllIfExists(SelectedEntries)) {
                     OnAppliedEdit(EventArgs.Empty);
                 }
+                SelectedEntries = new string[0];
             }
         }
 

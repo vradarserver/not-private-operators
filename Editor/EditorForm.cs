@@ -90,13 +90,27 @@ namespace Editor
         private void LoadState()
         {
             var state = PersistentStateManager.Load();
-            BaseStationSqbFileName = state.BaseStationSqbFullPath;
+            BaseStationSqbFileName =    state.BaseStationSqbFullPath;
+            Filter =                    state.Filter;
+            StartsWithFilter =          state.StartsWithFilter;
+            ContainsFilter =            state.ContainsFilter;
+            EndsWithFilter =            state.EndsWithFilter;
+            ShowCategoryNone =          state.ShowCategoryNone;
+            ShowCategoryNotPrivate =    state.ShowCategoryNotPrivate;
+            ShowCategoryPrivate =       state.ShowCategoryPrivate;
         }
 
         private void SaveState()
         {
             PersistentStateManager.ChangeState(state => {
-                state.BaseStationSqbFullPath = BaseStationSqbFileName;
+                state.BaseStationSqbFullPath =  BaseStationSqbFileName;
+                state.Filter =                  Filter;
+                state.StartsWithFilter =        StartsWithFilter;
+                state.ContainsFilter =          ContainsFilter;
+                state.EndsWithFilter =          EndsWithFilter;
+                state.ShowCategoryNone =        ShowCategoryNone;
+                state.ShowCategoryNotPrivate =  ShowCategoryNotPrivate;
+                state.ShowCategoryPrivate =     ShowCategoryPrivate;
             });
         }
 
@@ -199,6 +213,15 @@ namespace Editor
             BuildAircraftListItems();
         }
 
+        protected override void OnClosing(CancelEventArgs e)
+        {
+            base.OnClosing(e);
+
+            if(!DesignMode) {
+                SaveState();
+            }
+        }
+
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
@@ -216,7 +239,6 @@ namespace Editor
         private void LoadPrivateAircraftButton_Click(object sender, EventArgs e)
         {
             LoadPrivateAircraft();
-            SaveState();
         }
 
         private void AircraftListView_RetrieveVirtualItem(object sender, RetrieveVirtualItemEventArgs e)
