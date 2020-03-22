@@ -54,6 +54,7 @@
             this.CategoryNotPrivateCheckBox = new System.Windows.Forms.CheckBox();
             this.CategoryPrivateCheckBox = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ApplyFilterButton = new System.Windows.Forms.Button();
             this.NamesAndContentsSplitter = new System.Windows.Forms.SplitContainer();
             this.FilesTabControl = new System.Windows.Forms.TabControl();
             this.NotPrivateRegularExpressionsTabPage = new System.Windows.Forms.TabPage();
@@ -110,7 +111,7 @@
             this.AircraftListView.Location = new System.Drawing.Point(0, 76);
             this.AircraftListView.Name = "AircraftListView";
             this.AircraftListView.Size = new System.Drawing.Size(587, 417);
-            this.AircraftListView.TabIndex = 8;
+            this.AircraftListView.TabIndex = 13;
             this.AircraftListView.UseCompatibleStateImageBehavior = false;
             this.AircraftListView.View = System.Windows.Forms.View.Details;
             this.AircraftListView.VirtualMode = true;
@@ -196,9 +197,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.FilterTextBox.Location = new System.Drawing.Point(93, 27);
             this.FilterTextBox.Name = "FilterTextBox";
-            this.FilterTextBox.Size = new System.Drawing.Size(262, 20);
+            this.FilterTextBox.Size = new System.Drawing.Size(181, 20);
             this.FilterTextBox.TabIndex = 4;
-            this.FilterTextBox.TextChanged += new System.EventHandler(this.FilterTextBox_TextChanged);
+            this.FilterTextBox.Enter += new System.EventHandler(this.FilterTextBox_Enter);
+            this.FilterTextBox.Leave += new System.EventHandler(this.FilterTextBox_Leave);
             // 
             // label2
             // 
@@ -215,38 +217,35 @@
             this.StartsWithRadio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.StartsWithRadio.AutoSize = true;
             this.StartsWithRadio.Checked = true;
-            this.StartsWithRadio.Location = new System.Drawing.Point(361, 28);
+            this.StartsWithRadio.Location = new System.Drawing.Point(283, 28);
             this.StartsWithRadio.Name = "StartsWithRadio";
             this.StartsWithRadio.Size = new System.Drawing.Size(74, 17);
             this.StartsWithRadio.TabIndex = 5;
             this.StartsWithRadio.TabStop = true;
             this.StartsWithRadio.Text = "Starts with";
             this.StartsWithRadio.UseVisualStyleBackColor = true;
-            this.StartsWithRadio.CheckedChanged += new System.EventHandler(this.FilterRadioButtons_CheckedChanged);
             // 
             // ContainsRadio
             // 
             this.ContainsRadio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ContainsRadio.AutoSize = true;
-            this.ContainsRadio.Location = new System.Drawing.Point(441, 28);
+            this.ContainsRadio.Location = new System.Drawing.Point(363, 28);
             this.ContainsRadio.Name = "ContainsRadio";
             this.ContainsRadio.Size = new System.Drawing.Size(66, 17);
             this.ContainsRadio.TabIndex = 6;
             this.ContainsRadio.Text = "Contains";
             this.ContainsRadio.UseVisualStyleBackColor = true;
-            this.ContainsRadio.CheckedChanged += new System.EventHandler(this.FilterRadioButtons_CheckedChanged);
             // 
             // EndsWithRadio
             // 
             this.EndsWithRadio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.EndsWithRadio.AutoSize = true;
-            this.EndsWithRadio.Location = new System.Drawing.Point(513, 28);
+            this.EndsWithRadio.Location = new System.Drawing.Point(435, 28);
             this.EndsWithRadio.Name = "EndsWithRadio";
             this.EndsWithRadio.Size = new System.Drawing.Size(71, 17);
             this.EndsWithRadio.TabIndex = 7;
             this.EndsWithRadio.Text = "Ends with";
             this.EndsWithRadio.UseVisualStyleBackColor = true;
-            this.EndsWithRadio.CheckedChanged += new System.EventHandler(this.FilterRadioButtons_CheckedChanged);
             // 
             // ListViewCountLabel
             // 
@@ -256,7 +255,7 @@
             this.ListViewCountLabel.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.ListViewCountLabel.Name = "ListViewCountLabel";
             this.ListViewCountLabel.Size = new System.Drawing.Size(40, 13);
-            this.ListViewCountLabel.TabIndex = 9;
+            this.ListViewCountLabel.TabIndex = 14;
             this.ListViewCountLabel.Text = "0 items";
             // 
             // SaveButton
@@ -279,7 +278,7 @@
             this.CategoryNoneCheckBox.Location = new System.Drawing.Point(93, 53);
             this.CategoryNoneCheckBox.Name = "CategoryNoneCheckBox";
             this.CategoryNoneCheckBox.Size = new System.Drawing.Size(52, 17);
-            this.CategoryNoneCheckBox.TabIndex = 11;
+            this.CategoryNoneCheckBox.TabIndex = 10;
             this.CategoryNoneCheckBox.Text = "None";
             this.CategoryNoneCheckBox.UseVisualStyleBackColor = true;
             this.CategoryNoneCheckBox.CheckedChanged += new System.EventHandler(this.ShowCategory_CheckedChanged);
@@ -291,7 +290,7 @@
             this.label3.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 13);
-            this.label3.TabIndex = 12;
+            this.label3.TabIndex = 9;
             this.label3.Text = "Categories:";
             // 
             // CategoryNotPrivateCheckBox
@@ -302,7 +301,7 @@
             this.CategoryNotPrivateCheckBox.Location = new System.Drawing.Point(151, 53);
             this.CategoryNotPrivateCheckBox.Name = "CategoryNotPrivateCheckBox";
             this.CategoryNotPrivateCheckBox.Size = new System.Drawing.Size(78, 17);
-            this.CategoryNotPrivateCheckBox.TabIndex = 13;
+            this.CategoryNotPrivateCheckBox.TabIndex = 11;
             this.CategoryNotPrivateCheckBox.Text = "Not private";
             this.CategoryNotPrivateCheckBox.UseVisualStyleBackColor = true;
             this.CategoryNotPrivateCheckBox.CheckedChanged += new System.EventHandler(this.ShowCategory_CheckedChanged);
@@ -315,13 +314,14 @@
             this.CategoryPrivateCheckBox.Location = new System.Drawing.Point(235, 53);
             this.CategoryPrivateCheckBox.Name = "CategoryPrivateCheckBox";
             this.CategoryPrivateCheckBox.Size = new System.Drawing.Size(59, 17);
-            this.CategoryPrivateCheckBox.TabIndex = 14;
+            this.CategoryPrivateCheckBox.TabIndex = 12;
             this.CategoryPrivateCheckBox.Text = "Private";
             this.CategoryPrivateCheckBox.UseVisualStyleBackColor = true;
             this.CategoryPrivateCheckBox.CheckedChanged += new System.EventHandler(this.ShowCategory_CheckedChanged);
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.ApplyFilterButton);
             this.panel1.Controls.Add(this.AircraftListView);
             this.panel1.Controls.Add(this.ListViewCountLabel);
             this.panel1.Controls.Add(this.CategoryPrivateCheckBox);
@@ -341,7 +341,18 @@
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(587, 509);
-            this.panel1.TabIndex = 15;
+            this.panel1.TabIndex = 0;
+            // 
+            // ApplyFilterButton
+            // 
+            this.ApplyFilterButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ApplyFilterButton.Location = new System.Drawing.Point(512, 29);
+            this.ApplyFilterButton.Name = "ApplyFilterButton";
+            this.ApplyFilterButton.Size = new System.Drawing.Size(75, 23);
+            this.ApplyFilterButton.TabIndex = 8;
+            this.ApplyFilterButton.Text = "Apply";
+            this.ApplyFilterButton.UseVisualStyleBackColor = true;
+            this.ApplyFilterButton.Click += new System.EventHandler(this.ApplyFilterButton_Click);
             // 
             // NamesAndContentsSplitter
             // 
@@ -498,6 +509,7 @@
         private StringsFileContentListViewControl NotPrivateRegularExpressionsContent;
         private StringsFileContentListViewControl NotPrivateNamesContent;
         private StringsFileContentListViewControl PrivateNamesContent;
+        private System.Windows.Forms.Button ApplyFilterButton;
     }
 }
 

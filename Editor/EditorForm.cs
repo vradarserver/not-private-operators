@@ -247,9 +247,7 @@ namespace Editor
             }
         }
 
-        private void FilterTextBox_TextChanged(object sender, EventArgs e) => BuildAircraftListItems();
-
-        private void FilterRadioButtons_CheckedChanged(object sender, EventArgs e) => BuildAircraftListItems();
+        private void ApplyFilterButton_Click(object sender, EventArgs e) => BuildAircraftListItems();
 
         private void ShowCategory_CheckedChanged(object sender, EventArgs e) => BuildAircraftListItems();
 
@@ -264,5 +262,23 @@ namespace Editor
         private void SaveButton_Click(object sender, EventArgs e) => NameAndExpressionFiles.Save();
 
         private void FileContentControl_AppliedEdit(object sender, EventArgs e) => BuildAircraftListItems();
+
+        private IButtonControl _DefaultButtonOnEnteringFilterTextBox;
+
+        private void FilterTextBox_Enter(object sender, EventArgs e)
+        {
+            if(!DesignMode && _DefaultButtonOnEnteringFilterTextBox == null) {
+                _DefaultButtonOnEnteringFilterTextBox = AcceptButton;
+                AcceptButton = ApplyFilterButton;
+            }
+        }
+
+        private void FilterTextBox_Leave(object sender, EventArgs e)
+        {
+            if(!DesignMode && _DefaultButtonOnEnteringFilterTextBox != null) {
+                AcceptButton = _DefaultButtonOnEnteringFilterTextBox;
+                _DefaultButtonOnEnteringFilterTextBox = null;
+            }
+        }
     }
 }
