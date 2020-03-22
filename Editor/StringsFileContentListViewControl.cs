@@ -176,8 +176,7 @@ namespace Editor
                 SelectedEntries = new string[0];
                 EditFirstSelectedEntry();
             } else if(e.KeyCode == Keys.Space) {
-                if(EditEntryTextBox.SelectionStart == 0 || EditEntryTextBox.SelectionStart >= EditEntryTextBox.Text.Length) {
-                    // Text gets trimmed before saving, it's unsafe to let them think the space they're entering will be saved
+                if(EditEntryTextBox.SelectionStart == 0) {
                     e.SuppressKeyPress = true;
                     e.Handled = true;
                 }
