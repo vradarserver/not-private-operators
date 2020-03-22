@@ -9,3 +9,18 @@
 # for aircraft that have no operator ICAO but are not privately owned. There
 # is one regular expression per line and all are case insensitive.
 
+\bairline[s]?\b
+\bco(rp|rp.|rporation|.)?$
+\bdemolition[s]?\b
+\binc[.]?$
+\blimited$
+\bllc[.]?$
+\bllp[.]?$
+\blp$
+\bltd(.|a|a.)?$
+\bmuseeum[s]?\b
+\bp/l$
+\bsa$
+\btrust(ee)?$
+^[^ ]+$
+^[0-9]

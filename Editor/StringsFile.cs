@@ -19,9 +19,22 @@ namespace Editor
 
         public IList<string> FileHeader { get; set; }
 
+        public event EventHandler ContentsChanged;
+
+        protected virtual void OnContentsChanged(EventArgs args) => ContentsChanged?.Invoke(this, args);
+
         public StringsFile(string fileName)
         {
             FileName = fileName;
+        }
+
+        public IList<string> GetSortedContent()
+        {
+            return Contents
+                .Select(r => (r ?? "").Trim())
+                .Where(r => r != "")
+                .OrderBy(r => r.ToLower())
+                .ToArray();
         }
 
         public void Load()
@@ -46,6 +59,8 @@ namespace Editor
                         Contents.Add(line);
                     }
                 }
+
+                OnContentsChanged(EventArgs.Empty);
             }
         }
 
@@ -58,12 +73,7 @@ namespace Editor
                             streamWriter.WriteLine(headerLine);
                         }
 
-                        var lines = Contents
-                            .Select(r => (r ?? "").Trim())
-                            .Where(r => r != "")
-                            .OrderBy(r => r.ToLower());
-
-                        foreach(var line in lines) {
+                        foreach(var line in GetSortedContent()) {
                             streamWriter.WriteLine(line);
                         }
                     }
@@ -71,34 +81,86 @@ namespace Editor
             }
         }
 
-        public void AddIfNotExists(string entry)
+        public bool AddIfNotExists(string entry, bool raiseContentsChanged = true)
         {
+            var contentsChanged = false;
+
             var trimmed = (entry ?? "").Trim();
             if(trimmed != "" && !Contents.Contains(trimmed)) {
                 Contents.Add(trimmed);
+                contentsChanged = true;
             }
+
+            if(contentsChanged && raiseContentsChanged) {
+                OnContentsChanged(EventArgs.Empty);
+            }
+
+            return contentsChanged;
         }
 
-        public void AddAllIfNotExists(IEnumerable<string> entries)
+        public bool AddAllIfNotExists(IEnumerable<string> entries, bool raiseContentsChanged = true)
         {
+            var contentsChanged = false;
+
             foreach(var entry in (entries ?? new string[0])) {
-                AddIfNotExists(entry);
+                if(AddIfNotExists(entry, raiseContentsChanged: false)) {
+                    contentsChanged = true;
+                }
             }
+
+            if(contentsChanged && raiseContentsChanged) {
+                OnContentsChanged(EventArgs.Empty);
+            }
+
+            return contentsChanged;
         }
 
-        public void RemoveIfExists(string entry)
+        public bool RemoveIfExists(string entry, bool raiseContentsChanged = true)
         {
+            var contentsChanged = false;
+
             var trimmed = (entry ?? "").Trim();
             if(Contents.Contains(trimmed)) {
                 Contents.Remove(trimmed);
+                contentsChanged = true;
             }
+
+            if(contentsChanged && raiseContentsChanged) {
+                OnContentsChanged(EventArgs.Empty);
+            }
+
+            return contentsChanged;
         }
 
-        public void RemoveAllIfExists(IEnumerable<string> entries)
+        public bool RemoveAllIfExists(IEnumerable<string> entries, bool raiseContentsChanged = true)
         {
+            var contentsChanged = false;
+
             foreach(var entry in (entries ?? new string[0])) {
-                RemoveIfExists(entry);
+                if(RemoveIfExists(entry, raiseContentsChanged: false)) {
+                    contentsChanged = true;
+                }
             }
+
+            if(contentsChanged && raiseContentsChanged) {
+                OnContentsChanged(EventArgs.Empty);
+            }
+
+            return contentsChanged;
+        }
+
+        public bool Replace(string oldValue, string newValue, bool raiseContentsChanged = true)
+        {
+            var contentsChanged = RemoveIfExists(oldValue, raiseContentsChanged: false);
+            if(AddIfNotExists(newValue, raiseContentsChanged: false)) {
+                contentsChanged = true;
+            }
+
+            if(contentsChanged && raiseContentsChanged) {
+                OnContentsChanged(EventArgs.Empty);
+            }
+
+            return contentsChanged;
         }
     }
 }

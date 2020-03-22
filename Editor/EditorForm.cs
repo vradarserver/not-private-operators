@@ -191,6 +191,10 @@ namespace Editor
             if(!DesignMode) {
                 NameAndExpressionFiles.Load();
                 LoadState();
+
+                NotPrivateNamesContent.StringsFile =                NameAndExpressionFiles.NotPrivateNames;
+                NotPrivateRegularExpressionsContent.StringsFile =   NameAndExpressionFiles.NotPrivateRegularExpressions;
+                PrivateNamesContent.StringsFile =                   NameAndExpressionFiles.PrivateNames;
             }
         }
 
@@ -231,5 +235,7 @@ namespace Editor
         private void RemoveFromPrivateNamesMenuItem_Click(object sender, EventArgs e) => RemoveSelectedFromPrivateNames();
 
         private void SaveButton_Click(object sender, EventArgs e) => NameAndExpressionFiles.Save();
+
+        private void FileContentControl_AppliedEdit(object sender, EventArgs e) => BuildAircraftListItems();
     }
 }
