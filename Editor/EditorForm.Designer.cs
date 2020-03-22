@@ -53,22 +53,25 @@
             this.label3 = new System.Windows.Forms.Label();
             this.CategoryNotPrivateCheckBox = new System.Windows.Forms.CheckBox();
             this.CategoryPrivateCheckBox = new System.Windows.Forms.CheckBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.OperatorNameContextMenu.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // BaseStationSqbFileNameTextBox
             // 
             this.BaseStationSqbFileNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.BaseStationSqbFileNameTextBox.Location = new System.Drawing.Point(105, 13);
+            this.BaseStationSqbFileNameTextBox.Location = new System.Drawing.Point(93, 1);
             this.BaseStationSqbFileNameTextBox.Name = "BaseStationSqbFileNameTextBox";
-            this.BaseStationSqbFileNameTextBox.Size = new System.Drawing.Size(402, 20);
+            this.BaseStationSqbFileNameTextBox.Size = new System.Drawing.Size(779, 20);
             this.BaseStationSqbFileNameTextBox.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 16);
+            this.label1.Location = new System.Drawing.Point(0, 5);
+            this.label1.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(87, 13);
             this.label1.TabIndex = 0;
@@ -88,9 +91,9 @@
             this.AircraftListView.FullRowSelect = true;
             this.AircraftListView.GridLines = true;
             this.AircraftListView.HideSelection = false;
-            this.AircraftListView.Location = new System.Drawing.Point(15, 113);
+            this.AircraftListView.Location = new System.Drawing.Point(0, 76);
             this.AircraftListView.Name = "AircraftListView";
-            this.AircraftListView.Size = new System.Drawing.Size(573, 405);
+            this.AircraftListView.Size = new System.Drawing.Size(953, 430);
             this.AircraftListView.TabIndex = 8;
             this.AircraftListView.UseCompatibleStateImageBehavior = false;
             this.AircraftListView.View = System.Windows.Forms.View.Details;
@@ -161,7 +164,8 @@
             // LoadPrivateAircraftButton
             // 
             this.LoadPrivateAircraftButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.LoadPrivateAircraftButton.Location = new System.Drawing.Point(513, 12);
+            this.LoadPrivateAircraftButton.Location = new System.Drawing.Point(878, 0);
+            this.LoadPrivateAircraftButton.Margin = new System.Windows.Forms.Padding(3, 0, 0, 3);
             this.LoadPrivateAircraftButton.Name = "LoadPrivateAircraftButton";
             this.LoadPrivateAircraftButton.Size = new System.Drawing.Size(75, 23);
             this.LoadPrivateAircraftButton.TabIndex = 2;
@@ -173,16 +177,17 @@
             // 
             this.FilterTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.FilterTextBox.Location = new System.Drawing.Point(105, 39);
+            this.FilterTextBox.Location = new System.Drawing.Point(93, 27);
             this.FilterTextBox.Name = "FilterTextBox";
-            this.FilterTextBox.Size = new System.Drawing.Size(251, 20);
+            this.FilterTextBox.Size = new System.Drawing.Size(628, 20);
             this.FilterTextBox.TabIndex = 4;
             this.FilterTextBox.TextChanged += new System.EventHandler(this.FilterTextBox_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 42);
+            this.label2.Location = new System.Drawing.Point(0, 30);
+            this.label2.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(32, 13);
             this.label2.TabIndex = 3;
@@ -193,7 +198,7 @@
             this.StartsWithRadio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.StartsWithRadio.AutoSize = true;
             this.StartsWithRadio.Checked = true;
-            this.StartsWithRadio.Location = new System.Drawing.Point(362, 40);
+            this.StartsWithRadio.Location = new System.Drawing.Point(727, 28);
             this.StartsWithRadio.Name = "StartsWithRadio";
             this.StartsWithRadio.Size = new System.Drawing.Size(74, 17);
             this.StartsWithRadio.TabIndex = 5;
@@ -206,7 +211,7 @@
             // 
             this.ContainsRadio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ContainsRadio.AutoSize = true;
-            this.ContainsRadio.Location = new System.Drawing.Point(442, 40);
+            this.ContainsRadio.Location = new System.Drawing.Point(807, 28);
             this.ContainsRadio.Name = "ContainsRadio";
             this.ContainsRadio.Size = new System.Drawing.Size(66, 17);
             this.ContainsRadio.TabIndex = 6;
@@ -218,7 +223,7 @@
             // 
             this.EndsWithRadio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.EndsWithRadio.AutoSize = true;
-            this.EndsWithRadio.Location = new System.Drawing.Point(514, 40);
+            this.EndsWithRadio.Location = new System.Drawing.Point(879, 28);
             this.EndsWithRadio.Name = "EndsWithRadio";
             this.EndsWithRadio.Size = new System.Drawing.Size(71, 17);
             this.EndsWithRadio.TabIndex = 7;
@@ -230,7 +235,8 @@
             // 
             this.ListViewCountLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.ListViewCountLabel.AutoSize = true;
-            this.ListViewCountLabel.Location = new System.Drawing.Point(12, 521);
+            this.ListViewCountLabel.Location = new System.Drawing.Point(0, 509);
+            this.ListViewCountLabel.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.ListViewCountLabel.Name = "ListViewCountLabel";
             this.ListViewCountLabel.Size = new System.Drawing.Size(40, 13);
             this.ListViewCountLabel.TabIndex = 9;
@@ -239,8 +245,8 @@
             // SaveButton
             // 
             this.SaveButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.SaveButton.Location = new System.Drawing.Point(513, 530);
-            this.SaveButton.Margin = new System.Windows.Forms.Padding(3, 9, 3, 3);
+            this.SaveButton.Location = new System.Drawing.Point(878, 518);
+            this.SaveButton.Margin = new System.Windows.Forms.Padding(3, 9, 0, 0);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(75, 23);
             this.SaveButton.TabIndex = 10;
@@ -253,7 +259,7 @@
             this.CategoryNoneCheckBox.AutoSize = true;
             this.CategoryNoneCheckBox.Checked = true;
             this.CategoryNoneCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.CategoryNoneCheckBox.Location = new System.Drawing.Point(105, 66);
+            this.CategoryNoneCheckBox.Location = new System.Drawing.Point(93, 53);
             this.CategoryNoneCheckBox.Name = "CategoryNoneCheckBox";
             this.CategoryNoneCheckBox.Size = new System.Drawing.Size(52, 17);
             this.CategoryNoneCheckBox.TabIndex = 11;
@@ -264,7 +270,8 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 67);
+            this.label3.Location = new System.Drawing.Point(0, 54);
+            this.label3.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 13);
             this.label3.TabIndex = 12;
@@ -275,7 +282,7 @@
             this.CategoryNotPrivateCheckBox.AutoSize = true;
             this.CategoryNotPrivateCheckBox.Checked = true;
             this.CategoryNotPrivateCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.CategoryNotPrivateCheckBox.Location = new System.Drawing.Point(163, 66);
+            this.CategoryNotPrivateCheckBox.Location = new System.Drawing.Point(151, 53);
             this.CategoryNotPrivateCheckBox.Name = "CategoryNotPrivateCheckBox";
             this.CategoryNotPrivateCheckBox.Size = new System.Drawing.Size(78, 17);
             this.CategoryNotPrivateCheckBox.TabIndex = 13;
@@ -288,7 +295,7 @@
             this.CategoryPrivateCheckBox.AutoSize = true;
             this.CategoryPrivateCheckBox.Checked = true;
             this.CategoryPrivateCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.CategoryPrivateCheckBox.Location = new System.Drawing.Point(247, 66);
+            this.CategoryPrivateCheckBox.Location = new System.Drawing.Point(235, 53);
             this.CategoryPrivateCheckBox.Name = "CategoryPrivateCheckBox";
             this.CategoryPrivateCheckBox.Size = new System.Drawing.Size(59, 17);
             this.CategoryPrivateCheckBox.TabIndex = 14;
@@ -296,34 +303,43 @@
             this.CategoryPrivateCheckBox.UseVisualStyleBackColor = true;
             this.CategoryPrivateCheckBox.CheckedChanged += new System.EventHandler(this.ShowCategory_CheckedChanged);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.AircraftListView);
+            this.panel1.Controls.Add(this.ListViewCountLabel);
+            this.panel1.Controls.Add(this.CategoryPrivateCheckBox);
+            this.panel1.Controls.Add(this.SaveButton);
+            this.panel1.Controls.Add(this.CategoryNotPrivateCheckBox);
+            this.panel1.Controls.Add(this.LoadPrivateAircraftButton);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.BaseStationSqbFileNameTextBox);
+            this.panel1.Controls.Add(this.CategoryNoneCheckBox);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.EndsWithRadio);
+            this.panel1.Controls.Add(this.FilterTextBox);
+            this.panel1.Controls.Add(this.ContainsRadio);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.StartsWithRadio);
+            this.panel1.Location = new System.Drawing.Point(15, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(953, 541);
+            this.panel1.TabIndex = 15;
+            // 
             // EditorForm
             // 
             this.AcceptButton = this.LoadPrivateAircraftButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 565);
-            this.Controls.Add(this.CategoryPrivateCheckBox);
-            this.Controls.Add(this.CategoryNotPrivateCheckBox);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.CategoryNoneCheckBox);
-            this.Controls.Add(this.SaveButton);
-            this.Controls.Add(this.ListViewCountLabel);
-            this.Controls.Add(this.EndsWithRadio);
-            this.Controls.Add(this.ContainsRadio);
-            this.Controls.Add(this.StartsWithRadio);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.FilterTextBox);
-            this.Controls.Add(this.LoadPrivateAircraftButton);
-            this.Controls.Add(this.AircraftListView);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.BaseStationSqbFileNameTextBox);
+            this.ClientSize = new System.Drawing.Size(980, 565);
+            this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EditorForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "not-private-operators Editor";
             this.OperatorNameContextMenu.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -353,6 +369,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckBox CategoryNotPrivateCheckBox;
         private System.Windows.Forms.CheckBox CategoryPrivateCheckBox;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 
