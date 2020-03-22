@@ -9,23 +9,53 @@
 # for aircraft that have no operator ICAO but are not privately owned. There
 # is one regular expression per line and all are case insensitive.
 
+\badministradores\b
+\badventure\b
+\bair\b
 \bairline[s]?\b
+\bairway[s]?\b
+\basset[s]?\b
 \baviation\b
+\bbvba$
+\bcanada\b
+\bcharter(s)?\b
 \bco(mpany|mpanies|rp|rp.|rporation|.)?$
+\bcollege\b
+\bconstruction\b
 \bdemolition[s]?\b
+\beurope\b
+\bflight[s]?\b
+\bfly(ers?)\b
+\bfreight(er|ers)\b
+\bgmbh$
+\bgroup\b
 \bhavacilik\b
-\binc[.]?$
+\binc[.]?\b
+\bindustr(y|ies)\b
+\binternational\b
+\binvestment[s]?\b
+\bjet[s]?\b
+\bleasing\b
 \blimited$
 \bllc[.]?$
 \bllp[.]?$
 \blp$
 \bltd(.|a|a.)?$
-\bmuseeum[s]?\b
+\bmanagement\b
+\bmuseum[s]?\b
+\bnv$
 \bp/l$
+\bparaguay\b
+\bpilot\b
 \bpolice\b
 \bsa$
 \bsarl$
 \bsas$
+\bservice[s]?\b
+\bsro$
+\bstrategic\b
+\bsystem[s]?\b
+\btaxi\b
 \btrust(ee)?$
 ^[^ ]+$
 ^[0-9]

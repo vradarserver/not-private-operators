@@ -9,3 +9,6 @@
 # operator ICAO but are not privately owned. There is one name per line. All
 # names are case insensitive.
 
+AB Ost-Flyg
+ABC Color
+Aces High
