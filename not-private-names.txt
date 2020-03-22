@@ -9,7 +9,6 @@
 # operator ICAO but are not privately owned. There is one name per line. All
 # names are case insensitive.
 
-AB Ost-Flyg
 ABC Color
 Aces High
 Akademiya GA AON
@@ -24,13 +23,24 @@ Armasuisse Geschäftseinheit Luftfahrtsysteme
 Asahi Shimbun Press
 Asahi Shimbun Sha
 ASD Sprl
-ASI AB
 ASL Labratories
 Atlantik FA
 Augsburger Verein für Segelflug
 Austral Líneas Aéreas
+Avialsa T-35 Aviación Agrícola del Levante S.L.
+Aviatekhsnab OOO
 Avion Alliance
 Azul Linhas Aereas Brasileiras
+Ballenstedter AC
+Baron & Budd P C
+Barristair LC
+Beacon West
+Bluecross Blueshield of Tennessee
+Bogie Brothers
+Borror Brothers
+Brasilia 15587
+BSF Swissphoto
+Bundesministerium des Innern
 C L Thomas HoldingsLLC
 Carolina Assessoria Empresarial
 CBD AG LLV
@@ -46,3 +56,62 @@ Country Garden Pacificview Sdn Bhd
 Cranbrook Flavours CC
 Crystal Mountain
 Cub Crafters
+Dachser SE
+Daiwa Transort
+Dauphine 27
+Davisa Desarrollos Inmobiliarios SA se CV
+DGA Essais en Vol
+Digicel td
+Dragon Step
+Dream Wind
+E Malamatinas & Son
+Eager Beaver
+Eagle Wind
+Easy Power
+Edge Aerodynamix
+EFP Le Blanc
+Eigentumergesellschaft MT-GG-CM-CF-AGM
+E-Invest AD
+Elara OAO
+Emercom of Russia
+Emival Eterno da Costa
+Entre-Deux Helico
+Entreprise Bonkoungou Mahamadou et Fils
+EPS de la Moselle
+ES 156308 LC
+Escola de Aviacao Aerocondor
+ETA Los Boldos de Villarrica
+ETAT / DGAC / DSNA / DITI
+Europejski Fundusz Leasingowy
+Eurotech Stl
+Evan Luft
+Extrafruti Sa-Com de Hortifruitigranj OU
+Farmacres 21
+Flugskoli Islands
+FMBA Rossii
+Foersaeljnings AB Balticum
+Fundacion Infante de Orleans
+Furstenberger Francois
+Galegrove 2 LBG
+Geo Power
+Gie Bleu Horizon
+GIE Mustang
+G-JENK Chatteris 2015
+Go Interests
+GosNII MGA
+Granadera Vista Alegra
+Granbril SACIFIA
+Green Flag
+Helibase 99
+Hevilift PNG
+HK Bellawings
+Hormann KG
+Hornit OOD
+Housel LLC DBA
+HS Thirsk & Son
+Icelandic CAA
+Inversiones Almacenadoria 2020
+Inversiones Farwest
+Irwin Plant Sales
+Jade Dragon
+JAT Privredna Avijacija
