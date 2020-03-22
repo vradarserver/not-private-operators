@@ -10,8 +10,10 @@
 # is one regular expression per line and all are case insensitive.
 
 \bairline[s]?\b
-\bco(rp|rp.|rporation|.)?$
+\baviation\b
+\bco(mpany|mpanies|rp|rp.|rporation|.)?$
 \bdemolition[s]?\b
+\bhavacilik\b
 \binc[.]?$
 \blimited$
 \bllc[.]?$
@@ -20,7 +22,10 @@
 \bltd(.|a|a.)?$
 \bmuseeum[s]?\b
 \bp/l$
+\bpolice\b
 \bsa$
+\bsarl$
+\bsas$
 \btrust(ee)?$
 ^[^ ]+$
 ^[0-9]

@@ -115,6 +115,7 @@
             this.AircraftListView.View = System.Windows.Forms.View.Details;
             this.AircraftListView.VirtualMode = true;
             this.AircraftListView.RetrieveVirtualItem += new System.Windows.Forms.RetrieveVirtualItemEventHandler(this.AircraftListView_RetrieveVirtualItem);
+            this.AircraftListView.SearchForVirtualItem += new System.Windows.Forms.SearchForVirtualItemEventHandler(this.AircraftListView_SearchForVirtualItem);
             // 
             // OperatorNameColumn
             // 

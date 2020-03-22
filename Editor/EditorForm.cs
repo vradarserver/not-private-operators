@@ -25,6 +25,8 @@ namespace Editor
 
         private List<AircraftListItem> _AircraftListItems = new List<AircraftListItem>();
 
+        private Dictionary<string, int> _AircraftListItemIndexes = new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase);
+
         public string BaseStationSqbFileName
         {
             get => BaseStationSqbFileNameTextBox.Text.Trim();
@@ -111,7 +113,10 @@ namespace Editor
 
         private void BuildAircraftListItems()
         {
+            var scrollToIdx = AircraftListView.TopItem?.Index ?? -1;
+
             _AircraftListItems.Clear();
+            _AircraftListItemIndexes.Clear();
 
             _AircraftListItems.AddRange(
                 _AllCandidateAircraft
@@ -134,10 +139,21 @@ namespace Editor
                         };
                     })
             );
+            for(var i = 0;i < _AircraftListItems.Count;++i) {
+                var aircraftListItem = _AircraftListItems[i];
+                _AircraftListItemIndexes.Add(aircraftListItem.OperatorName, i);
+            }
 
             AircraftListView.BeginUpdate();
             try {
                 AircraftListView.VirtualListSize = _AircraftListItems.Count;
+                scrollToIdx = Math.Min(scrollToIdx, _AircraftListItems.Count - 1);
+                if(scrollToIdx != -1) {
+                    var item = AircraftListView.FindItemWithText(_AircraftListItems[scrollToIdx].OperatorName);
+                    if(item != null) {
+                        AircraftListView.TopItem = item;
+                    }
+                }
             } finally {
                 AircraftListView.EndUpdate();
             }
@@ -217,6 +233,15 @@ namespace Editor
                             : "Private",
                     aircraftListItem.CountAircraft.ToString("N0"),
                 });
+            }
+        }
+
+        private void AircraftListView_SearchForVirtualItem(object sender, SearchForVirtualItemEventArgs e)
+        {
+            if(e.IsTextSearch) {
+                if(_AircraftListItemIndexes.TryGetValue(e.Text, out var index)) {
+                    e.Index = index;
+                }
             }
         }
 
