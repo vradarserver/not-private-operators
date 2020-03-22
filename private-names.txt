@@ -1,0 +1,11 @@
+# Hash denotes the start of a line comment, everything after the hash is
+# ignored. Blank lines are ignored. Whitespace is stripped from the start and
+# end of each line. Line endings can be either DOS or Unix format.
+#
+# Virtual Radar Server makes the assumption that all aircraft that do not have
+# an operator ICAO are privately owned.
+#
+# This file is a list of operator names for aircraft match regular expressions
+# that identify non-private aircraft operators but are in fact privately
+# owned.
+
