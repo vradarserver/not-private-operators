@@ -15,8 +15,6 @@ Akademiya GA AON
 AlpenHelicopter UG
 Alpi Eagles
 Altavista Patrimonial Imobiliaria LTDA - ME
-Amapola Flyg
-Andalus Lineas Aereas
 ARA Flugrettung
 Aracachon Parachitisme EPSBA
 Armasuisse Geschäftseinheit Luftfahrtsysteme
@@ -64,7 +62,6 @@ DGA Essais en Vol
 Digicel td
 Dragon Step
 Dream Wind
-E Malamatinas & Son
 Eager Beaver
 Eagle Wind
 Easy Power
@@ -108,10 +105,47 @@ HK Bellawings
 Hormann KG
 Hornit OOD
 Housel LLC DBA
-HS Thirsk & Son
 Icelandic CAA
 Inversiones Almacenadoria 2020
 Inversiones Farwest
 Irwin Plant Sales
 Jade Dragon
 JAT Privredna Avijacija
+Johnson & Johnson
+Jordans Guardian Angels
+JSC MBK-S
+Kamov OKB
+KAPO im Gorbunova
+Kapp Werkzeugemaschinenfabrik
+Kazan APO
+Keybank NA
+Kolskaya GMK
+Kopfer Kopfer GBR
+Las Mercedes IC & ISA
+Ledesma SAAI
+Lelykopters Beheer
+Les Chantieres De Chibougamou Ltee
+Les Placements A.A.A.
+Letno Issledovatelviskii Aerogeofisueski Tsentr
+Lifeflight Eagle
+Linea Turistica Aereotuy
+Lineas Aéreas Santafecinas
+Lockheed Martin
+Lodgings 2000LP
+LPS Letecke Prace a Sluzby
+LPS-Letecke Prace a Sluzby
+LSB Bonn
+LuxemBird SC
+Mambo LC
+Manetrade 120
+Masterkorp FZE
+Mayo Clinic
+MChS Rossii
+MCL Falcon
+Medecins Sans Frontieres
+Megador 126
+Migunov MA
+Mil OKB
+Monte Rock
+Mountain Beaver
+MRP Leningrad

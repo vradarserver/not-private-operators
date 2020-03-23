@@ -9,17 +9,20 @@
 # for aircraft that have no operator ICAO but are not privately owned. There
 # is one regular expression per line and all are case insensitive.
 
+& son[s]?\b
 \b(air)?ambulance\b
 \ba.s[.]?$
 \ba/s$
 \bab$
 \bacademy\b
 \bacquisition[s]?\b
+\badministracao\b
 \badministradores\b
 \badministrao\b
 \badministration\b
 \badventure[s]?\b
 \badvertising\b
+\baer\b
 \baereo\b
 \baereos\b
 \baerial\b
@@ -37,12 +40,14 @@
 \baeroservice[s]?\b
 \baerospace\b
 \baerostatique\b
+\baerotaxi\b
 \baerotech\b
 \baerotransporte\b
 \baeroworks\b
 \bafrika\b
 \bag$
 \bagency\b
+\bagro\b
 \bagropecuaria\b
 \bair\b
 \bairbatics\b
@@ -51,6 +56,7 @@
 \baircrane\b
 \bairlift\b
 \bairline[s]?\b
+\bairplane\b
 \bairport[s]?\b
 \bairservice[s]?\b
 \bairtanker[s]?\b
@@ -65,6 +71,7 @@
 \barizona\b
 \barmy\b
 \bas$
+\basia\b
 \basset[s]?\b
 \bassoc(\.|iation|iated|iazione|iacao|iados)?\b
 \bassociate[s]?\b
@@ -75,6 +82,7 @@
 \bautomation\b
 \bautomotive\b
 \bavia\b
+\baviacao\b
 \baviacion\b
 \baviaklub\b
 \baviakompania\b
@@ -86,26 +94,33 @@
 \baviation\b
 \bavion\b
 \bavionics\b
+\bb v$
 \bb.v.$
 \bballonclub\b
 \bballoon[s]?\b
 \bbanco\b
 \bbank\b
+\bbiotechnology\b
 \bboard\b
+\bbolivia\b
 \bbomber[s]?\b
 \bborder\b
 \bbrasil\b
 \bbroadcasting\b
+\bbuilder[s]?\b
 \bbv$
 \bbvba$
 \bbvi$
 \bca$
 \bcafe\b
+\bcambodia\b
 \bcanada\b
 \bcanadian\b
 \bcapital\b
+\bcaravan\b
 \bcardiovascular\b
 \bcargo\b
+\bcarrier[s]?\b
 \bcartografico\b
 \bcc$
 \bcenter\b
@@ -124,6 +139,8 @@
 \bcoastguard\b
 \bcollection\b
 \bcollege\b
+\bcolombia\b
+\bcolumbia\b
 \bcomercia\b
 \bcomercial\b
 \bcomercializacion\b
@@ -138,6 +155,7 @@
 \bcompagnie\b
 \bcompanhia\b
 \bcompania\b
+\bconnect\b
 \bconnection[s]?\b
 \bconsolidated\b
 \bconstruction[s]?\b
@@ -145,15 +163,19 @@
 \bconsult(ants|ing)\b
 \bconsultoria\b
 \bcontract(ing|ors)\b
+\bcontrol[s]\b
 \bcontrol\b
 \bcooperativa\b
 \bcooperative\b
 \bcopter[s]?\b
+\bcorp[.]?\b
 \bcorporacion\b
 \bcorporativa\b
+\bcosmetique\b
 \bcosta rica\b
 \bcounty\b
 \bcowboy[s]?\b
+\bcropdusting\b
 \bcustom[s]?\b
 \bdaviation\b
 \bde cv$
@@ -171,7 +193,9 @@
 \bdistribudora\b
 \bdistributor[s]?\b
 \bdoctor\b
+\bdrill(ing)?\b
 \becole\b
+\beconomica\b
 \becuador\b
 \belectricas\b
 \belectronics\b
@@ -180,6 +204,7 @@
 \benergo\b
 \benergy\b
 \benforcement\b
+\bengineering\b
 \benterprise[s]?\b
 \bentertainment\b
 \bequipment\b
@@ -195,9 +220,11 @@
 \bexecujet\b
 \bexecutive\b
 \bexecutor\b
+\bexpedit(e|ors)\b
 \bexpress\b
 \bfabrica\b
 \bfabricias\b
+\bfactory\b
 \bfallschirmsport
 \bfarm[s]?\b
 \bfederal\b
@@ -205,6 +232,7 @@
 \bfedex\b
 \bfighter[s]?\b
 \bfinanc(ement|es|ial)?\b
+\bfleet\b
 \bfliegermuseum\b
 \bfliegerschule\b
 \bfliegerverein\b
@@ -239,6 +267,7 @@
 \bgobernacion\b
 \bgobierno\b
 \bgolf\b
+\bgoncalves\b
 \bgovernment\b
 \bgoverno do\b
 \bgovernor of\b
@@ -273,16 +302,19 @@
 \bimport[s]?\b
 \bimportacao\b
 \binc[.]?\b
+\bincorp[.]?\b
 \bincorporated\b
 \bindia\b
 \bindonesia\b
 \bindustr(y|ies)\b
+\bindustria\b
 \bindustrial\b
 \bindustrias\b
 \bindustrie[s]?\b
 \bindustrielle\b
 \bindustry\b
 \binstituto\b
+\bintermediacao\b
 \binternacional\b
 \binternational\b
 \binvest(ment|ments)?\b
@@ -293,11 +325,21 @@
 \bjapan\b
 \bjet[s]?\b
 \bjetair\b
+\bjeweller[s]?\b
+\bjumbo\b
 \bkenya\b
+\bklm\b
+\bknowledge\b
+\bkuala lumpur\b
+\blab[s]?\b
+\blaboratoire\b
 \blaborator(y|ies)\b
+\blaboratorio\b
+\blandesbank\b
 \blaw firm\b
 \blda$
 \bleas(e|ing)\b
+\bleisure\b
 \blift\b
 \blimitada$
 \blimited[.]?$
@@ -309,9 +351,13 @@
 \blouisiana\b
 \blp$
 \bltd(.|a|a.)?$
+\blufthansa\b
+\bluftline\b
 \bluftrettung\b
+\bluftsportverband\b
 \blumber\b
 \bmachine[s]?\b
+\bmalaysia[n]?\b
 \bmalaysia\b
 \bmalta\b
 \bmanagement\b
@@ -320,16 +366,21 @@
 \bmarine[s]?\b
 \bmarketing\b
 \bmedflight\b
+\bmedical[s]?\b
 \bmedicamentos\b
-\bmedicine\b
+\bmedicine[s]?\b
 \bmemorial\b
+\bmetro-
 \bmexico\b
 \bmilitar\b
 \bmilitary\b
 \bmin(e|es|ing)\b
 \bmineraloelwerke\b
+\bministerio\b
 \bministr(ies|y)\b
+\bmorocc(an|o)\b
 \bmotor[s]?\b
+\bmotorflugzeuge\b
 \bmotorgroup\b
 \bmotorsport[s]?\b
 \bmundial\b
@@ -342,7 +393,9 @@
 \bnavigation\b
 \bnavy\b
 \bnetwork[s]?\b
+\bnigeria\b
 \bnv$
+\bof\b
 \boffice\b
 \boffshore\b
 \boncology\b
@@ -359,6 +412,7 @@
 \bparticipacoes\b
 \bpartner(s|ship)?\b
 \bpersonnel\b
+\bperu\b
 \bpetroleum\b
 \bphiladelphia\b
 \bphilippines\b
@@ -370,6 +424,8 @@
 \bproduct[s]?\b
 \bproduction[s]?\b
 \bpromotion\b
+\bpropert(ies|y)\b
+\bpty[.]?$
 \bpublica\b
 \bpuerto rico\b
 \bracing\b
@@ -377,6 +433,7 @@
 \bregional\b
 \brent(al)?\b
 \brepair\b
+\brepresentacoes\b
 \brescue\b
 \bresearch\b
 \bresort[s]?\b
@@ -392,10 +449,13 @@
 \bsarl$
 \bsas$
 \bschool[s]?\b
+\bsdn[.]? bhd[.]?$
 \bseaplane[s]?\b
 \bservice[s]?\b
+\bservicios\b
 \bshuttle\b
 \bsiberia\b
+\bsingapore\b
 \bsky\b
 \bskydive(r|s|rs)?\b
 \bskyjet[s]?\b
@@ -411,15 +471,18 @@
 \bsrl$
 \bsro$
 \bstarcraft\b
+\bstate\b
 \bstation\b
-\bstrategic\b
+\bstrateg(ic|ies|y)\b
 \bsuperstore[s]?\b
 \bsurvey(ing|s)?\b
 \bsyndicate\b
 \bsystem[s]?\b
+\bt/a\b
 \btanker[s]?\b
 \btaxi\b
 \bteam\b
+\btech[s]?\b
 \btechnolog(ies|y)\b
 \bthailand\b
 \btheatre\b
@@ -430,6 +493,7 @@
 \btransporte[s]?\b
 \btransportnaya\b
 \btravel[s]?\b
+\btribe\b
 \btrust(ee)?\b
 \bturbine[s]?\b
 \bturbo\b
@@ -444,6 +508,7 @@
 \bvenezuela\b
 \bventure[s]?\b
 \bwarbird[s]?\b
+\bwindows\b
 \bwing[s]?\b
 \bwork[s]?\b
 \bworld\b
@@ -479,3 +544,5 @@
 ^heli
 ^inter
 ^island
+^jet
+^jump\b
