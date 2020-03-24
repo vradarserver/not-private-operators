@@ -24,6 +24,15 @@ namespace Editor
             }
         }
 
+        public static bool IsDirty
+        {
+            get {
+                return NotPrivateNames.IsDirty
+                    || NotPrivateRegularExpressions.IsDirty
+                    || PrivateNames.IsDirty;
+            }
+        }
+
         public static StringsFile NotPrivateNames { get; } = new StringsFile("not-private-names.txt");
 
         public static StringsFile NotPrivateRegularExpressions { get; } = new StringsFile("not-private-regular-expressions.txt");

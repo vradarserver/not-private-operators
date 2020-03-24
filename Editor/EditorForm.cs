@@ -221,6 +221,23 @@ namespace Editor
 
             if(!DesignMode) {
                 SaveState();
+
+                if(NameAndExpressionFiles.IsDirty) {
+                    switch(MessageBox.Show(
+                        "Do you want to save your changes?",
+                        "Unsaved Changes",
+                        MessageBoxButtons.YesNoCancel,
+                        MessageBoxIcon.Question,
+                        MessageBoxDefaultButton.Button1
+                    )) {
+                        case DialogResult.Yes:
+                            NameAndExpressionFiles.Save();
+                            break;
+                        case DialogResult.Cancel:
+                            e.Cancel = true;
+                            break;
+                    }
+                }
             }
         }
 

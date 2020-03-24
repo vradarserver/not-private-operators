@@ -21,6 +21,8 @@ namespace Editor
 
         public event EventHandler ContentsChanged;
 
+        public bool IsDirty { get; private set; }
+
         protected virtual void OnContentsChanged(EventArgs args) => ContentsChanged?.Invoke(this, args);
 
         public StringsFile(string fileName)
@@ -60,6 +62,8 @@ namespace Editor
                     }
                 }
 
+                IsDirty = false;
+
                 OnContentsChanged(EventArgs.Empty);
             }
         }
@@ -78,7 +82,21 @@ namespace Editor
                         }
                     }
                 }
+
+                IsDirty = false;
             }
+        }
+
+        private bool ProcessContentsChanged(bool contentsChanged, bool raiseContentsChanged)
+        {
+            if(contentsChanged) {
+                IsDirty = true;
+                if(raiseContentsChanged) {
+                    OnContentsChanged(EventArgs.Empty);
+                }
+            }
+
+            return contentsChanged;
         }
 
         public bool AddIfNotExists(string entry, bool raiseContentsChanged = true)
@@ -91,11 +109,7 @@ namespace Editor
                 contentsChanged = true;
             }
 
-            if(contentsChanged && raiseContentsChanged) {
-                OnContentsChanged(EventArgs.Empty);
-            }
-
-            return contentsChanged;
+            return ProcessContentsChanged(contentsChanged, raiseContentsChanged);
         }
 
         public bool AddAllIfNotExists(IEnumerable<string> entries, bool raiseContentsChanged = true)
@@ -108,11 +122,7 @@ namespace Editor
                 }
             }
 
-            if(contentsChanged && raiseContentsChanged) {
-                OnContentsChanged(EventArgs.Empty);
-            }
-
-            return contentsChanged;
+            return ProcessContentsChanged(contentsChanged, raiseContentsChanged);
         }
 
         public bool RemoveIfExists(string entry, bool raiseContentsChanged = true)
@@ -125,11 +135,7 @@ namespace Editor
                 contentsChanged = true;
             }
 
-            if(contentsChanged && raiseContentsChanged) {
-                OnContentsChanged(EventArgs.Empty);
-            }
-
-            return contentsChanged;
+            return ProcessContentsChanged(contentsChanged, raiseContentsChanged);
         }
 
         public bool RemoveAllIfExists(IEnumerable<string> entries, bool raiseContentsChanged = true)
@@ -142,11 +148,7 @@ namespace Editor
                 }
             }
 
-            if(contentsChanged && raiseContentsChanged) {
-                OnContentsChanged(EventArgs.Empty);
-            }
-
-            return contentsChanged;
+            return ProcessContentsChanged(contentsChanged, raiseContentsChanged);
         }
 
         public bool Replace(string oldValue, string newValue, bool raiseContentsChanged = true)
@@ -156,11 +158,7 @@ namespace Editor
                 contentsChanged = true;
             }
 
-            if(contentsChanged && raiseContentsChanged) {
-                OnContentsChanged(EventArgs.Empty);
-            }
-
-            return contentsChanged;
+            return ProcessContentsChanged(contentsChanged, raiseContentsChanged);
         }
     }
 }
