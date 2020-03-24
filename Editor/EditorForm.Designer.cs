@@ -58,10 +58,10 @@
             this.NamesAndContentsSplitter = new System.Windows.Forms.SplitContainer();
             this.FilesTabControl = new System.Windows.Forms.TabControl();
             this.NotPrivateRegularExpressionsTabPage = new System.Windows.Forms.TabPage();
-            this.NotPrivateRegularExpressionsContent = new Editor.StringsFileContentListViewControl();
             this.NotPrivateNamesTabPage = new System.Windows.Forms.TabPage();
-            this.NotPrivateNamesContent = new Editor.StringsFileContentListViewControl();
             this.PrivateNamesTabPage = new System.Windows.Forms.TabPage();
+            this.NotPrivateRegularExpressionsContent = new Editor.StringsFileContentListViewControl();
+            this.NotPrivateNamesContent = new Editor.StringsFileContentListViewControl();
             this.PrivateNamesContent = new Editor.StringsFileContentListViewControl();
             this.OperatorNameContextMenu.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -224,6 +224,8 @@
             this.StartsWithRadio.TabStop = true;
             this.StartsWithRadio.Text = "&Starts with";
             this.StartsWithRadio.UseVisualStyleBackColor = true;
+            this.StartsWithRadio.Enter += new System.EventHandler(this.FilterRadioButton_Enter);
+            this.StartsWithRadio.Leave += new System.EventHandler(this.FilterRadioButton_Leave);
             // 
             // ContainsRadio
             // 
@@ -235,6 +237,8 @@
             this.ContainsRadio.TabIndex = 6;
             this.ContainsRadio.Text = "&Contains";
             this.ContainsRadio.UseVisualStyleBackColor = true;
+            this.ContainsRadio.Enter += new System.EventHandler(this.FilterRadioButton_Enter);
+            this.ContainsRadio.Leave += new System.EventHandler(this.FilterRadioButton_Leave);
             // 
             // EndsWithRadio
             // 
@@ -246,6 +250,8 @@
             this.EndsWithRadio.TabIndex = 7;
             this.EndsWithRadio.Text = "&Ends with";
             this.EndsWithRadio.UseVisualStyleBackColor = true;
+            this.EndsWithRadio.Enter += new System.EventHandler(this.FilterRadioButton_Enter);
+            this.EndsWithRadio.Leave += new System.EventHandler(this.FilterRadioButton_Leave);
             // 
             // ListViewCountLabel
             // 
@@ -399,16 +405,6 @@
             this.NotPrivateRegularExpressionsTabPage.TabIndex = 1;
             this.NotPrivateRegularExpressionsTabPage.Text = "not-private-regular-expressions";
             // 
-            // NotPrivateRegularExpressionsContent
-            // 
-            this.NotPrivateRegularExpressionsContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.NotPrivateRegularExpressionsContent.Location = new System.Drawing.Point(0, 0);
-            this.NotPrivateRegularExpressionsContent.Margin = new System.Windows.Forms.Padding(0);
-            this.NotPrivateRegularExpressionsContent.Name = "NotPrivateRegularExpressionsContent";
-            this.NotPrivateRegularExpressionsContent.Size = new System.Drawing.Size(360, 483);
-            this.NotPrivateRegularExpressionsContent.TabIndex = 0;
-            this.NotPrivateRegularExpressionsContent.AppliedEdit += new System.EventHandler(this.FileContentControl_AppliedEdit);
-            // 
             // NotPrivateNamesTabPage
             // 
             this.NotPrivateNamesTabPage.BackColor = System.Drawing.SystemColors.Control;
@@ -420,16 +416,6 @@
             this.NotPrivateNamesTabPage.TabIndex = 2;
             this.NotPrivateNamesTabPage.Text = "not-private-names";
             // 
-            // NotPrivateNamesContent
-            // 
-            this.NotPrivateNamesContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.NotPrivateNamesContent.Location = new System.Drawing.Point(0, 0);
-            this.NotPrivateNamesContent.Margin = new System.Windows.Forms.Padding(0);
-            this.NotPrivateNamesContent.Name = "NotPrivateNamesContent";
-            this.NotPrivateNamesContent.Size = new System.Drawing.Size(360, 483);
-            this.NotPrivateNamesContent.TabIndex = 0;
-            this.NotPrivateNamesContent.AppliedEdit += new System.EventHandler(this.FileContentControl_AppliedEdit);
-            // 
             // PrivateNamesTabPage
             // 
             this.PrivateNamesTabPage.BackColor = System.Drawing.SystemColors.Control;
@@ -440,6 +426,26 @@
             this.PrivateNamesTabPage.Size = new System.Drawing.Size(360, 483);
             this.PrivateNamesTabPage.TabIndex = 3;
             this.PrivateNamesTabPage.Text = "private-names";
+            // 
+            // NotPrivateRegularExpressionsContent
+            // 
+            this.NotPrivateRegularExpressionsContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.NotPrivateRegularExpressionsContent.Location = new System.Drawing.Point(0, 0);
+            this.NotPrivateRegularExpressionsContent.Margin = new System.Windows.Forms.Padding(0);
+            this.NotPrivateRegularExpressionsContent.Name = "NotPrivateRegularExpressionsContent";
+            this.NotPrivateRegularExpressionsContent.Size = new System.Drawing.Size(360, 483);
+            this.NotPrivateRegularExpressionsContent.TabIndex = 0;
+            this.NotPrivateRegularExpressionsContent.AppliedEdit += new System.EventHandler(this.FileContentControl_AppliedEdit);
+            // 
+            // NotPrivateNamesContent
+            // 
+            this.NotPrivateNamesContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.NotPrivateNamesContent.Location = new System.Drawing.Point(0, 0);
+            this.NotPrivateNamesContent.Margin = new System.Windows.Forms.Padding(0);
+            this.NotPrivateNamesContent.Name = "NotPrivateNamesContent";
+            this.NotPrivateNamesContent.Size = new System.Drawing.Size(360, 483);
+            this.NotPrivateNamesContent.TabIndex = 0;
+            this.NotPrivateNamesContent.AppliedEdit += new System.EventHandler(this.FileContentControl_AppliedEdit);
             // 
             // PrivateNamesContent
             // 

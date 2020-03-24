@@ -27,6 +27,8 @@ namespace Editor
 
         private Dictionary<string, int> _AircraftListItemIndexes = new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase);
 
+        private IButtonControl _DefaultButtonOnEnteringFilter;
+
         public string BaseStationSqbFileName
         {
             get => BaseStationSqbFileNameTextBox.Text.Trim();
@@ -282,22 +284,28 @@ namespace Editor
 
         private void FileContentControl_AppliedEdit(object sender, EventArgs e) => BuildAircraftListItems();
 
-        private IButtonControl _DefaultButtonOnEnteringFilterTextBox;
-
-        private void FilterTextBox_Enter(object sender, EventArgs e)
+        private void EnterFilterControl()
         {
-            if(!DesignMode && _DefaultButtonOnEnteringFilterTextBox == null) {
-                _DefaultButtonOnEnteringFilterTextBox = AcceptButton;
+            if(!DesignMode && _DefaultButtonOnEnteringFilter == null) {
+                _DefaultButtonOnEnteringFilter = AcceptButton;
                 AcceptButton = ApplyFilterButton;
             }
         }
 
-        private void FilterTextBox_Leave(object sender, EventArgs e)
+        private void FilterTextBox_Enter(object sender, EventArgs e) => EnterFilterControl();
+
+        private void FilterRadioButton_Enter(object sender, EventArgs e) => EnterFilterControl();
+
+        private void LeaveFilterControl()
         {
-            if(!DesignMode && _DefaultButtonOnEnteringFilterTextBox != null) {
-                AcceptButton = _DefaultButtonOnEnteringFilterTextBox;
-                _DefaultButtonOnEnteringFilterTextBox = null;
+            if(!DesignMode && _DefaultButtonOnEnteringFilter != null) {
+                AcceptButton = _DefaultButtonOnEnteringFilter;
+                _DefaultButtonOnEnteringFilter = null;
             }
         }
+
+        private void FilterTextBox_Leave(object sender, EventArgs e) => LeaveFilterControl();
+
+        private void FilterRadioButton_Leave(object sender, EventArgs e) => LeaveFilterControl();
     }
 }
