@@ -356,6 +356,9 @@
             // 
             // NamesAndContentsSplitter
             // 
+            this.NamesAndContentsSplitter.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.NamesAndContentsSplitter.Location = new System.Drawing.Point(12, 12);
             this.NamesAndContentsSplitter.Name = "NamesAndContentsSplitter";
             // 
