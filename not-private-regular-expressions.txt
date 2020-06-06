@@ -61,6 +61,7 @@
 \bairlift\b
 \bairline[s]?\b
 \bairlink\b
+\bairllc$
 \bairmotive\b
 \bairpart[s]?\b
 \bairplane\b
@@ -267,6 +268,7 @@
 \bfertilizer[s]?\b
 \bfighter[s]?\b
 \bfinanc(ement|es|ial|iera)?\b
+\bfirefighting\b
 \bfleet\b
 \bfliegermuseum\b
 \bfliegerschule\b
@@ -473,6 +475,7 @@
 \bparachutisme\b
 \bparadox\b
 \bparaguay\b
+\bparatrooper[s]?\b
 \bpart[s]?\b
 \bparticipacoes\b
 \bpartner(s|ship)?\b
@@ -490,6 +493,7 @@
 \bplc$
 \bpolar\b
 \bpolic(e|ia)\b
+\bpolitechnika\b
 \bportugal\b
 \bportuguese\b
 \bprefecture\b
@@ -508,6 +512,7 @@
 \bqantas\b
 \bracing\b
 \bradar\b
+\brailroad\b
 \branch\b
 \brare\b
 \bred bull\b
@@ -520,6 +525,7 @@
 \bresearch\b
 \bresort[s]?\b
 \bresource[s]?\b
+\brestoration[s]?\b
 \brocket(eer|eers|man|men|s)?\b
 \brolls royce\b
 \brotor(air|craft|crafts|s|sky|sun)\b
@@ -573,6 +579,7 @@
 \bstrateg(ic|ies|y)\b
 \bsupermarket[s]?\b
 \bsuperstore[s]?\b
+\bsupply\b
 \bsurgery\b
 \bsurplus\b
 \bsurvey(ing|s)?\b
@@ -588,6 +595,7 @@
 \btechnik\b
 \btechnolog(ies|y)\b
 \btelecom(m|ms|munication|munications|s)?\b
+\btelevision\b
 \bthailand\b
 \btheatre\b
 \btour[s]?\b
@@ -599,14 +607,18 @@
 \btransportnaya\b
 \btravel[s]?\b
 \btribe\b
+\btruck[s]?\b
 \btrust(ee|ees)?\b
 \bturbine[s]?\b
 \bturbo\b
+\btyre[s]?\b
 \buganda\b
 \buk\b
 \bukraine\b
+\bunion\b
 \bunited\b
 \buniversal\b
+\buniversidad\b
 \buniversit(a|esi)\b
 \buniversity\b
 \buruguay\b

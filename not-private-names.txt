@@ -40,9 +40,11 @@ Brasilia 15587
 BSF Swissphoto
 Bundesministerium des Innern
 C L Thomas HoldingsLLC
+Cal Fire
 Carolina Assessoria Empresarial
 CBD AG LLV
 Centurion Eye Hospital
+Chino Spitfires
 Chiquita Brands
 Cia Vale de Rio Doce
 Clearwater Midstream LLX
@@ -84,6 +86,7 @@ Eurotech Stl
 Evan Luft
 Extrafruti Sa-Com de Hortifruitigranj OU
 Farmacres 21
+Flightline First
 Flugskoli Islands
 FMBA Rossii
 Foersaeljnings AB Balticum
