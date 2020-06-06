@@ -22,6 +22,14 @@ namespace Editor
 
         public string BaseStationSqbFullPath { get; set; }
 
+        public string BaseStationSqbTwoFullPath { get; set; }
+
+        public bool LoadAllFromOne { get; set; } = true;
+
+        public bool LoadAllNewFromOne { get; set; }
+
+        public bool LoadAllNewFromTwo { get; set; }
+
         public string Filter { get; set; } = "a";
 
         public bool StartsWithFilter { get; set; } = true;

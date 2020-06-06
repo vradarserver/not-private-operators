@@ -29,10 +29,34 @@ namespace Editor
 
         private IButtonControl _DefaultButtonOnEnteringFilter;
 
-        public string BaseStationSqbFileName
+        public string BaseStationSqbOneFileName
         {
-            get => BaseStationSqbFileNameTextBox.Text.Trim();
-            set => BaseStationSqbFileNameTextBox.Text = value;
+            get => BaseStationSqbOneFileNameTextBox.Text.Trim();
+            set => BaseStationSqbOneFileNameTextBox.Text = value;
+        }
+
+        public string BaseStationSqbTwoFileName
+        {
+            get => BaseStationSqbTwoFileNameTextBox.Text.Trim();
+            set => BaseStationSqbTwoFileNameTextBox.Text = value;
+        }
+
+        public bool LoadAllFromOne
+        {
+            get => AllFromOneRadio.Checked;
+            set => AllFromOneRadio.Checked = value;
+        }
+
+        public bool LoadAllNewFromOne
+        {
+            get => AllNewFromOneRadio.Checked;
+            set => AllNewFromOneRadio.Checked = value;
+        }
+
+        public bool LoadAllNewFromTwo
+        {
+            get => AllNewFromTwoRadio.Checked;
+            set => AllNewFromTwoRadio.Checked = value;
         }
 
         public string Filter
@@ -92,7 +116,11 @@ namespace Editor
         private void LoadState()
         {
             var state = PersistentStateManager.Load();
-            BaseStationSqbFileName =    state.BaseStationSqbFullPath;
+            BaseStationSqbOneFileName = state.BaseStationSqbFullPath;
+            BaseStationSqbTwoFileName = state.BaseStationSqbTwoFullPath;
+            LoadAllFromOne =            state.LoadAllFromOne;
+            LoadAllNewFromOne =         state.LoadAllNewFromOne;
+            LoadAllNewFromTwo =         state.LoadAllNewFromTwo;
             Filter =                    state.Filter;
             StartsWithFilter =          state.StartsWithFilter;
             ContainsFilter =            state.ContainsFilter;
@@ -105,14 +133,18 @@ namespace Editor
         private void SaveState()
         {
             PersistentStateManager.ChangeState(state => {
-                state.BaseStationSqbFullPath =  BaseStationSqbFileName;
-                state.Filter =                  Filter;
-                state.StartsWithFilter =        StartsWithFilter;
-                state.ContainsFilter =          ContainsFilter;
-                state.EndsWithFilter =          EndsWithFilter;
-                state.ShowCategoryNone =        ShowCategoryNone;
-                state.ShowCategoryNotPrivate =  ShowCategoryNotPrivate;
-                state.ShowCategoryPrivate =     ShowCategoryPrivate;
+                state.BaseStationSqbFullPath =      BaseStationSqbOneFileName;
+                state.BaseStationSqbTwoFullPath =   BaseStationSqbTwoFileName;
+                state.LoadAllFromOne =              LoadAllFromOne;
+                state.LoadAllNewFromOne =           LoadAllNewFromOne;
+                state.LoadAllNewFromTwo =           LoadAllNewFromTwo;
+                state.Filter =                      Filter;
+                state.StartsWithFilter =            StartsWithFilter;
+                state.ContainsFilter =              ContainsFilter;
+                state.EndsWithFilter =              EndsWithFilter;
+                state.ShowCategoryNone =            ShowCategoryNone;
+                state.ShowCategoryNotPrivate =      ShowCategoryNotPrivate;
+                state.ShowCategoryPrivate =         ShowCategoryPrivate;
             });
         }
 
@@ -120,12 +152,44 @@ namespace Editor
         {
             using(new WaitCursor()) {
                 _AllCandidateAircraft.Clear();
+                IList<BaseStationAircraft> maybePrivateAircraft = null;
+
+                if(LoadAllFromOne) {
+                    maybePrivateAircraft = BaseStationDatabase.LoadMaybePrivateAircraft(BaseStationSqbOneFileName);
+                } else if(LoadAllNewFromOne || LoadAllNewFromTwo) {
+                    var oneAircraft = BaseStationDatabase.LoadMaybePrivateAircraft(BaseStationSqbOneFileName);
+                    var twoAircraft = BaseStationDatabase.LoadMaybePrivateAircraft(BaseStationSqbTwoFileName);
+
+                    void buildMaybePrivateAircraft(IList<BaseStationAircraft> master, IList<BaseStationAircraft> exclude)
+                    {
+                        var excludeNames = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+                        foreach(var excludeName in exclude
+                            .Where(r => !MilitaryIcaoRanges.IsMilitary(r.ModeS) && !String.IsNullOrEmpty(r.RegisteredOwners))
+                            .Select(r => r.RegisteredOwners)
+                        ) {
+                            if(!excludeNames.Contains(excludeName)) {
+                                excludeNames.Add(excludeName);
+                            }
+                        }
+
+                        maybePrivateAircraft = master
+                            .Where(r => String.IsNullOrEmpty(r.RegisteredOwners) || !excludeNames.Contains(r.RegisteredOwners))
+                            .ToArray();
+                    }
+
+                    if(LoadAllNewFromOne) {
+                        buildMaybePrivateAircraft(oneAircraft, exclude: twoAircraft);
+                    } else {
+                        buildMaybePrivateAircraft(twoAircraft, exclude: oneAircraft);
+                    }
+                }
+
                 _AllCandidateAircraft.AddRange(
-                    BaseStationDatabase
-                        .LoadMaybePrivateAircraft(BaseStationSqbFileName)
+                    maybePrivateAircraft
                         .Where(r => !MilitaryIcaoRanges.IsMilitary(r.ModeS))
                         .OrderBy(r => r.RegisteredOwners.ToLower())
                 );
+
                 BuildAircraftListItems();
             }
         }
@@ -213,6 +277,11 @@ namespace Editor
         {
             NameAndExpressionFiles.RemoveFromPrivateNames(SelectedOperatorNames);
             BuildAircraftListItems();
+        }
+
+        private void EnableDisableControls()
+        {
+            BaseStationSqbTwoFileNameTextBox.Enabled = LoadAllNewFromOne || LoadAllNewFromTwo;
         }
 
         protected override void OnClosing(CancelEventArgs e)
@@ -324,5 +393,7 @@ namespace Editor
         private void FilterTextBox_Leave(object sender, EventArgs e) => LeaveFilterControl();
 
         private void FilterRadioButton_Leave(object sender, EventArgs e) => LeaveFilterControl();
+
+        private void LoadAllFromRadios_CheckedChanged(object sender, EventArgs e) => EnableDisableControls();
     }
 }
