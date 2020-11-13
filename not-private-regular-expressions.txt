@@ -28,11 +28,13 @@
 \baereos\b
 \baerial\b
 \baero\b
+\baerobatic[s]?\b
 \baeroclub\b
 \baerocomercial\b
 \baerodrome[s]?\b
 \baeroklub\b
 \baerolineas\b
+\baeromedical\b
 \baeronauti(c|ca|cal|co|cs|que)\b
 \baeronaves\b
 \baeroplane[s]?\b
@@ -57,6 +59,7 @@
 \bairconnect\b
 \baircraft\b
 \baircrane\b
+\bairfield[s]?\b
 \bairland\b
 \bairlift\b
 \bairline[s]?\b
@@ -70,12 +73,14 @@
 \bairshow[s]?\b
 \bairspare[s]?\b
 \bairtanker[s]?\b
+\bairtour[s]\b
 \bairway[s]?\b
 \balaska[n]?\b
 \balcohol\b
 \baltitude\b
 \bamerica[n]?\b
 \bamericana\b
+\bapexheli\b
 \bapostolica\b
 \baps$
 \barchitect[s]?\b
@@ -119,6 +124,7 @@
 \bballoon[s]?\b
 \bbanco\b
 \bbank\b
+\bbell\stextron\b
 \bbenelux\b
 \bbiotechnology\b
 \bboard\b
@@ -142,6 +148,7 @@
 \bcar[s]?\b
 \bcaravan\b
 \bcardiovascular\b
+\bcareflight\b
 \bcargo\b
 \bcaribbean\b
 \bcarrier[s]?\b
@@ -209,6 +216,7 @@
 \bde cv$
 \bdefense\b
 \bdemolition[s]?\b
+\bdepartamento\b
 \bdepartementos\b
 \bdepartment\b
 \bdepartmento\b
@@ -243,6 +251,7 @@
 \bestablishment\b
 \bestate[s]?\b
 \bet al\b
+\beuropavia\b
 \beurope(an)?\b
 \beurope\b
 \bevangelho\b
@@ -333,6 +342,7 @@
 \bhelicoptere[s]?\b
 \bhelicopteros\b
 \bhelikopter[s]?\b
+\bhelilift\b
 \bheritage\b
 \bhighway\b
 \bhire\b
@@ -384,6 +394,7 @@
 \blda$
 \bleas(e|ing)\b
 \bleisure\b
+\blifeflight[s]?\b
 \blift\b
 \blimitada$
 \blimited[.]?\b
@@ -405,6 +416,7 @@
 \bluftrettung\b
 \bluftsportverband\b
 \blumber\b
+\bm1\b
 \bmachine[s]?\b
 \bmalaysia[n]?\b
 \bmalaysia\b
@@ -448,6 +460,7 @@
 \bnetjets\b
 \bnetwork[s]?\b
 \bnew england\b
+\bnew\szealand\b
 \bnigeria\b
 \bnord africain\b
 \bnordic\b
@@ -512,7 +525,8 @@
 \bqantas\b
 \bracing\b
 \bradar\b
-\brailroad\b
+\brailroad[s]?\b
+\brailway[s]?\b
 \branch\b
 \brare\b
 \bred bull\b
@@ -525,6 +539,7 @@
 \bresearch\b
 \bresort[s]?\b
 \bresource[s]?\b
+\brestaurant[e]?\b
 \brestoration[s]?\b
 \brocket(eer|eers|man|men|s)?\b
 \brolls royce\b
@@ -619,10 +634,11 @@
 \bunited\b
 \buniversal\b
 \buniversidad\b
-\buniversit(a|esi)\b
+\buniversit(a|at|esi)\b
 \buniversity\b
 \buruguay\b
 \busa\b
+\butilitara\b
 \bvehicle[s]?\b
 \bveiculos\b
 \bvenezuela\b
@@ -650,6 +666,7 @@
 ^agro\b
 ^air
 ^andes\b
+^as\b
 ^ask\b
 ^bestfly\b
 ^bleu\b

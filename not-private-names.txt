@@ -9,8 +9,10 @@
 # operator ICAO but are not privately owned. There is one name per line. All
 # names are case insensitive.
 
+AAK Stavropol
 ABC Color
 Aces High
+Agent CEL SLU
 Akademiya GA AON
 AlpenHelicopter UG
 Alpi Eagles
@@ -18,17 +20,26 @@ Altavista Patrimonial Imobiliaria LTDA - ME
 ARA Flugrettung
 Aracachon Parachitisme EPSBA
 Armasuisse Geschäftseinheit Luftfahrtsysteme
+Asahi Koyo
 Asahi Shimbun Press
 Asahi Shimbun Sha
 ASD Sprl
 ASL Labratories
 Atlantik FA
+Audiomix Eventos EIRELI
 Augsburger Verein für Segelflug
 Austral Líneas Aéreas
 Avialsa T-35 Aviación Agrícola del Levante S.L.
+Aviaret SAC
 Aviatekhsnab OOO
+Aviatsia Tambova
+Aviatsia Yaroslavl
 Avion Alliance
+Aviones del Cesar
+Avioparco FlyOzzano
 Azul Linhas Aereas Brasileiras
+B & LR
+BAA Cayman
 Ballenstedter AC
 Baron & Budd P C
 Barristair LC
@@ -47,11 +58,14 @@ Centurion Eye Hospital
 Chino Spitfires
 Chiquita Brands
 Cia Vale de Rio Doce
+Cirrus Sunshine Coast
 Clearwater Midstream LLX
 Com.de Zbor Amicii
 Comlux Aruba
+Commander Mexicana SA de
 Concrete Specialties
 Condor Flugdienst
+Coptering S L
 Country Garden Pacificview Sdn Bhd
 Cranbrook Flavours CC
 Crystal Mountain
@@ -62,8 +76,11 @@ Dauphine 27
 Davisa Desarrollos Inmobiliarios SA se CV
 DGA Essais en Vol
 Digicel td
+Discoverthesky SRLS
 Dragon Step
 Dream Wind
+Dunca Expeditions
+Dutch Bros Coffee
 Eager Beaver
 Eagle Wind
 Easy Power
@@ -86,6 +103,7 @@ Eurotech Stl
 Evan Luft
 Extrafruti Sa-Com de Hortifruitigranj OU
 Farmacres 21
+Fjallflygarna i Arjeplog
 Flightline First
 Flugskoli Islands
 FMBA Rossii
@@ -93,6 +111,7 @@ Foersaeljnings AB Balticum
 Fundacion Infante de Orleans
 Furstenberger Francois
 Galegrove 2 LBG
+GDP Vendome
 Geo Power
 Gie Bleu Horizon
 GIE Mustang
@@ -114,9 +133,11 @@ Inversiones Farwest
 Irwin Plant Sales
 Jade Dragon
 JAT Privredna Avijacija
+JIP Aviachio
 Johnson & Johnson
 Jordans Guardian Angels
 JSC MBK-S
+Kaman Aeorspace
 Kamov OKB
 KAPO im Gorbunova
 Kapp Werkzeugemaschinenfabrik
@@ -130,11 +151,15 @@ Lelykopters Beheer
 Les Chantieres De Chibougamou Ltee
 Les Placements A.A.A.
 Letno Issledovatelviskii Aerogeofisueski Tsentr
+Life Link III
 Lifeflight Eagle
+LifeLink III
+Lifestar Georgia
 Linea Turistica Aereotuy
 Lineas Aéreas Santafecinas
 Lockheed Martin
 Lodgings 2000LP
+Loogo SRLS
 LPS Letecke Prace a Sluzby
 LPS-Letecke Prace a Sluzby
 LSB Bonn
@@ -143,25 +168,31 @@ Mambo LC
 Manetrade 120
 Masterkorp FZE
 Mayo Clinic
+MBH SAMU
 McAfee & Taft
 MChS Rossii
 MCL Falcon
 Medecins Sans Frontieres
 Megador 126
+Merlin 1
 Migunov MA
 Mil OKB
 Millionair Dallas
+Milton Fries
 Monaco Royal Family
 Monte Rock
 Mountain Beaver
 MRP Leningrad
 Myasishchev EMZ
+Myflug hf
 N742AR LC
+Naka Nihon Koku
 Natiocredimurs SNC
 Neftyeyugansk OAO
 NeoNucleon KFT
 Nigerian Eagle
 NS Falcon
+OAMTC Flugrettung
 OLTK GA
 Ostthuring FSC
 OVNI SLU
@@ -171,10 +202,15 @@ Paul Bennet Arshows
 PAWA Dominicana
 Pegase GIE
 Pegasus 11
+PM Dusters
+Polsat TV
 Press Glass
 Primul Meridian
 Private Sun
 PT AMA
+PT Metropolis Propertindo Utama
+Pusat Kalibrasi Fasilitas Penerbangan
+Quax Flieger
 Red Letter Days
 River Front AKN
 RLP CR s.p.
@@ -182,7 +218,9 @@ RPGE Meridian Plus
 RSK Mig
 RVR Shelf
 Saatgut & Agrarservice Beesenstedt
+Samaritans Purse
 San Jose Sabrecats
+Sanford AirMed
 Sat Film
 Saudi Aramco
 Saudi Red Crescent
@@ -200,6 +238,8 @@ Shooting Stars
 SHYO Havaalany
 Sikorsky/PZL Mielec
 Simplifly Deccan
+Skylife Elite
+SLA-Flyer LC
 Slowfly Mongolfiere SNC
 Sofim SNC
 SP Zoz Lotnicze Pogotowie Ratunkowe
@@ -224,6 +264,8 @@ TN 24th J.D.D.T.F
 TOB SkyAviaTrans
 Tractoavion Ventas y Soluciones
 True South
+Turk Hava Kurumu
+Ultimate African Conservancy
 Unitrans AVV
 USDA APHIS WS ATOC
 Usina Sao Jose Estiva Acucar Alcool
@@ -232,20 +274,24 @@ Vertice Negocios E Empreedimentos Empresariais Eireli
 Viessmann Werke KG
 Vignobles en Vol
 Viking Outpost Cabins
+Vintage Trainers
 Vioepharmoges EPE
 Virgin Galactic
 Vityaz Aeri
 Vityaz-Avto OOO
 Vliegclub Schiphol
+VNH South
 Volgodonski ASK
 Vostotsnaya Neftyanaya Komp.
 VPTs Dzerzhinets
 Vzlynot NPO
+W Aircollection
 Walters & Wolff
 Weststar NDD
 Wheels Up
 Wielen en Motoren
 Wind 217
+WSOSP Deblin
 XM3 Aluminios Cortizo
 Yug Line
 Zakladu Uslug Agrolotniczych
