@@ -13,7 +13,9 @@ AAK Stavropol
 ABC Color
 Aces High
 Agent CEL SLU
+Agusa PC
 Akademiya GA AON
+Alarair OU
 AlpenHelicopter UG
 Alpi Eagles
 Altavista Patrimonial Imobiliaria LTDA - ME
@@ -77,6 +79,7 @@ Davisa Desarrollos Inmobiliarios SA se CV
 DGA Essais en Vol
 Digicel td
 Discoverthesky SRLS
+Docs friends
 Dragon Step
 Dream Wind
 Dunca Expeditions
@@ -204,6 +207,7 @@ Pegase GIE
 Pegasus 11
 PM Dusters
 Polsat TV
+Prairie Dusters
 Press Glass
 Primul Meridian
 Private Sun
@@ -212,6 +216,7 @@ PT Metropolis Propertindo Utama
 Pusat Kalibrasi Fasilitas Penerbangan
 Quax Flieger
 Red Letter Days
+Red Skies
 River Front AKN
 RLP CR s.p.
 RPGE Meridian Plus
@@ -241,6 +246,7 @@ Simplifly Deccan
 Skylife Elite
 SLA-Flyer LC
 Slowfly Mongolfiere SNC
+Smith-Marby Co DBA
 Sofim SNC
 SP Zoz Lotnicze Pogotowie Ratunkowe
 Spassktsement OAO
@@ -251,6 +257,7 @@ St. Michel Biscuits
 Stallion 51
 Star Dragon (Maxima Machineries)
 Ste Grenoble dElectronique et dAutomatisme
+Summukas OU
 Tafy Consuulting
 Tail Wind
 Tambovski ASK
@@ -263,6 +270,7 @@ Tinles d.o.o.
 TN 24th J.D.D.T.F
 TOB SkyAviaTrans
 Tractoavion Ventas y Soluciones
+Transpecos Banks SSB
 True South
 Turk Hava Kurumu
 Ultimate African Conservancy
@@ -291,8 +299,10 @@ Weststar NDD
 Wheels Up
 Wielen en Motoren
 Wind 217
+WRC Turtle Creek
 WSOSP Deblin
 XM3 Aluminios Cortizo
+Yada Yada Yada DBA
 Yug Line
 Zakladu Uslug Agrolotniczych
 Zibet Exim

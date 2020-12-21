@@ -513,7 +513,7 @@
 \bproduct[s]?\b
 \bproduction[s]?\b
 \bprogress\b
-\bproject\b
+\bproject[s]?\b
 \bpromotion\b
 \bpropert(ies|y)\b
 \bproprietary\b
@@ -551,6 +551,7 @@
 \bs/a$
 \bs/l$
 \bsa$
+\bsafety\b
 \bsailplane[s]?\b
 \bsan francisco\b
 \bsarl$
@@ -613,6 +614,7 @@
 \btelevision\b
 \bthailand\b
 \btheatre\b
+\btire[s]?\b
 \btour[s]?\b
 \btown\b
 \btrading\b
