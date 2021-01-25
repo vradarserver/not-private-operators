@@ -28,6 +28,7 @@ Asahi Shimbun Sha
 ASD Sprl
 ASL Labratories
 Atlantik FA
+ATSK Rosto
 Audiomix Eventos EIRELI
 Augsburger Verein für Segelflug
 Austral Líneas Aéreas
@@ -46,12 +47,14 @@ Ballenstedter AC
 Baron & Budd P C
 Barristair LC
 Beacon West
+BHS Hungary
 Bluecross Blueshield of Tennessee
 Bogie Brothers
 Borror Brothers
 Brasilia 15587
 BSF Swissphoto
 Bundesministerium des Innern
+Bushveld Game Capture
 C L Thomas HoldingsLLC
 Cal Fire
 Carolina Assessoria Empresarial
@@ -92,6 +95,7 @@ EFP Le Blanc
 Eigentumergesellschaft MT-GG-CM-CF-AGM
 E-Invest AD
 Elara OAO
+Elstree Ink
 Emercom of Russia
 Emival Eterno da Costa
 Entre-Deux Helico
@@ -111,6 +115,7 @@ Flightline First
 Flugskoli Islands
 FMBA Rossii
 Foersaeljnings AB Balticum
+Forgoszarny Kft
 Fundacion Infante de Orleans
 Furstenberger Francois
 Galegrove 2 LBG
@@ -131,6 +136,7 @@ Hormann KG
 Hornit OOD
 Housel LLC DBA
 Icelandic CAA
+Immobiliare Administradora De Omoveis Proprios Eireli
 Inversiones Almacenadoria 2020
 Inversiones Farwest
 Irwin Plant Sales
@@ -167,25 +173,30 @@ LPS Letecke Prace a Sluzby
 LPS-Letecke Prace a Sluzby
 LSB Bonn
 LuxemBird SC
+MAG & S
 Mambo LC
 Manetrade 120
 Masterkorp FZE
 Mayo Clinic
 MBH SAMU
 McAfee & Taft
+MChS Krasnoyar
 MChS Rossii
 MCL Falcon
 Medecins Sans Frontieres
 Megador 126
+MEM Rep Szolgalattr
 Merlin 1
 Migunov MA
 Mil OKB
 Millionair Dallas
 Milton Fries
+MO ATSK
 Monaco Royal Family
 Monte Rock
 Mountain Beaver
 MRP Leningrad
+Murillo Palacio De Alencar
 Myasishchev EMZ
 Myflug hf
 N742AR LC
@@ -194,11 +205,14 @@ Natiocredimurs SNC
 Neftyeyugansk OAO
 NeoNucleon KFT
 Nigerian Eagle
+Nizhnetagilsk ASK Rosto
+Novosibirsk ROSTO
 NS Falcon
 OAMTC Flugrettung
 OLTK GA
 Ostthuring FSC
 OVNI SLU
+Ozemovski RKZ 55
 Papa Fox
 Park House
 Paul Bennet Arshows
@@ -209,6 +223,7 @@ PM Dusters
 Polsat TV
 Prairie Dusters
 Press Glass
+Primex Kft
 Primul Meridian
 Private Sun
 PT AMA
@@ -219,6 +234,8 @@ Red Letter Days
 Red Skies
 River Front AKN
 RLP CR s.p.
+ROSTO Yakutsk
+ROSTO Yuzhnosakh
 RPGE Meridian Plus
 RSK Mig
 RVR Shelf
@@ -243,6 +260,7 @@ Shooting Stars
 SHYO Havaalany
 Sikorsky/PZL Mielec
 Simplifly Deccan
+Skargardsgruppen I
 Skylife Elite
 SLA-Flyer LC
 Slowfly Mongolfiere SNC
@@ -260,6 +278,7 @@ Ste Grenoble dElectronique et dAutomatisme
 Summukas OU
 Tafy Consuulting
 Tail Wind
+Tambov ROSTO
 Tambovski ASK
 Tata Steel
 Taxair Mexiquenses
@@ -272,6 +291,7 @@ TOB SkyAviaTrans
 Tractoavion Ventas y Soluciones
 Transpecos Banks SSB
 True South
+TsAK Tatarstan
 Turk Hava Kurumu
 Ultimate African Conservancy
 Unitrans AVV
@@ -290,6 +310,7 @@ Vityaz-Avto OOO
 Vliegclub Schiphol
 VNH South
 Volgodonski ASK
+Voronezhsky Dairy Plant
 Vostotsnaya Neftyanaya Komp.
 VPTs Dzerzhinets
 Vzlynot NPO

@@ -50,10 +50,10 @@
 \bafrika\b
 \bag$
 \bagency\b
+\bagr(i|o)\b
 \bagricola[s]?\b
-\bagro\b
 \bagropecuaria\b
-\bair(care|company|corp)\b
+\bair(care|club|company|corp)\b
 \bair[e]?\b
 \bairbatics\b
 \bairconnect\b
@@ -228,7 +228,7 @@
 \bdirect\b
 \bdirectorate\b
 \bdisplay[s]?\b
-\bdistribudora\b
+\bdistribu[i]?dora\b
 \bdistributor[s]?\b
 \bdistrict\b
 \bdoctor\b
