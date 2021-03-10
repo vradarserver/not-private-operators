@@ -110,6 +110,7 @@ Eurotech Stl
 Evan Luft
 Extrafruti Sa-Com de Hortifruitigranj OU
 Farmacres 21
+Feuerwehrflugdienst Niedersachsen
 Fjallflygarna i Arjeplog
 Flightline First
 Flugskoli Islands
@@ -125,6 +126,7 @@ Gie Bleu Horizon
 GIE Mustang
 G-JENK Chatteris 2015
 Go Interests
+Goonoo Goonoo Pastoral
 GosNII MGA
 Granadera Vista Alegra
 Granbril SACIFIA
@@ -266,16 +268,20 @@ SLA-Flyer LC
 Slowfly Mongolfiere SNC
 Smith-Marby Co DBA
 Sofim SNC
+Solar Gold Zrt
 SP Zoz Lotnicze Pogotowie Ratunkowe
 Spassktsement OAO
 Spectrem 2000 Microsurvey
+Speedfly 2
 SpenAero LC
 Spring Brook Marina
 St. Michel Biscuits
 Stallion 51
 Star Dragon (Maxima Machineries)
 Ste Grenoble dElectronique et dAutomatisme
+Ste SARL Chutextrem
 Summukas OU
+Sundance Swiss Tourism and Brands
 Tafy Consuulting
 Tail Wind
 Tambov ROSTO
@@ -292,6 +298,7 @@ Tractoavion Ventas y Soluciones
 Transpecos Banks SSB
 True South
 TsAK Tatarstan
+Tupelo Ltd LC
 Turk Hava Kurumu
 Ultimate African Conservancy
 Unitrans AVV
@@ -318,6 +325,7 @@ W Aircollection
 Walters & Wolff
 Weststar NDD
 Wheels Up
+White & Stradley PLLC
 Wielen en Motoren
 Wind 217
 WRC Turtle Creek

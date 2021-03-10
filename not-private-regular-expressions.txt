@@ -290,6 +290,7 @@
 \bflorida\b
 \bflug\b
 \bflugbetrieb\b
+\bflugdienst\b
 \bflugfelag\b
 \bflugfelagio\b
 \bfluggruppe\b
@@ -443,6 +444,7 @@
 \bministerio\b
 \bministr(ies|y)\b
 \bmorocc(an|o)\b
+\bmortgage\b
 \bmotor[s]?\b
 \bmotorflugzeuge\b
 \bmotorgroup\b
@@ -682,6 +684,7 @@
 ^consorcio\b
 ^dhl\b
 ^dhmi\b
+^dosaaf\b
 ^eads\b
 ^fly
 ^heli
