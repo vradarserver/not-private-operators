@@ -1,6 +1,9 @@
 # not-private-operators
 Regular expressions and text lists to identify operators who have no ICAO operator code but are not private citizens.
 
+**Now that VRS isn't taking PlaneBase aircraft updates it's no longer necessary to filter out private individuals, consequently
+this repository is no longer being updated.**
+
 ## Virtual Radar Server's use of these files.
 
 All aircraft that do not have an operator ICAO and are not military are assumed to be operated by private citizens unless:
